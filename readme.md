@@ -1,4 +1,4 @@
-#Thorium
+# Thorium
 
 Thorium is an experimental Less framework made to give a stable toolset to create immersive, responsive interfaces that maximise the use of screen space, while cutting the bullshit as much as possible and keeping everything predictable *and* totally flexible.
 
@@ -13,7 +13,7 @@ This is used to design and construct sites like [Mutant Standard](https://mutant
 ---
 
 
-###More predictable and flexible CSS behaviour.
+### More predictable and flexible CSS behaviour.
 
 The main philosophy of this framework is to use flexbox to make creating responsive sites in CSS as painless and as predictable as possible. This can often be at the cost of HTML simplicity (ie. some things create more nested tags).
 
@@ -21,7 +21,7 @@ ie. Buttons in Thorium require extra nested divs, but after that, you can simply
 
 
 
-###Making full use of Flexbox.
+### Making full use of Flexbox.
 Flexbox (especially the 2013 spec) is a wonderful positioning system that takes out so much pain from web design projects, and provides a lot of new opportunities, especially for responsive design.
 
 One of Thorium's main points is that it makes full use of the modern (2013) Flexbox spec. A lot of Thorium's shortcuts and pieces fully rely on this without fallbacks.
@@ -29,24 +29,24 @@ One of Thorium's main points is that it makes full use of the modern (2013) Flex
 If your projects require legacy browser support, this framework will possibly not be for you. See [http://caniuse.com/#feat=flexbox]( http://caniuse.com/#feat=flexbox) to see whether this is suitable for your project. 
 
 
-###Not a boilerplate.
+### Not a boilerplate.
 
 It's designed to provide an array of prebuilt pieces to give designers a headstart in making personal boilerplates and UI features. It is not designed to give a basic template to develop from, but give you better tools to create your own templates. 
 
 It does not have a theming system, base iconography or other graphical assets, only examples for designers to get to grips with Thorium and placeholders for their own graphical assets.
 
 
-###Flexible classes and patterns.
+### Flexible classes and patterns.
 
 Classes for various shortcuts and patterns can be used in HTML in an object-oriented CSS style, or placed into Less files as mixins so you can for instance, change them with @media queries on the fly.
 
-###Immersive design.
+### Immersive design.
 
 It's designed to emphasise full-screen space as much as possible.
 
-###You can use it in static websites!
+### You can use it in static websites!
 
-:D
+Just compile the Less and you are ready to go! :D
 
 ----
 
