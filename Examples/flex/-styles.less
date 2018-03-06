@@ -1,0 +1,75 @@
+@import "../../-thorium/-thorium-base";
+
+
+.hithere {
+  margin: 10px;
+  background-color: #ddd;
+}
+
+.flextest {
+  background-color: #aaa;
+  .gutter(20px, 20px);
+
+  > * {
+    background: #333;
+    color: #fff;
+  }
+}
+
+
+
+
+.spacer-end {
+  background-color: #999955;
+}
+
+
+.flexlinear {
+  > * {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
+.flexwrap > * {
+}
+
+
+.flexblocks > * {
+  width: 200px;
+}
+
+
+.flexgrid.rows > * {
+  .flex-basis(200px);
+}
+
+
+.flexcenter {
+  width: 100%;
+  height: 10vh;
+
+  > * {
+    width: 50px;
+    height: 50px;
+    background: #000000;
+  }
+
+}
+
+
+
+.inner-content {
+  .flexbox();
+  .flex-wrap(wrap);
+  .gutter(10px, 0px);
+  .flex-direction(column);
+
+  > * {
+    .flex(2013; 1; 1; auto);
+    background: #000000;
+    color: #fff;
+  }
+}

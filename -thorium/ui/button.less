@@ -1,0 +1,29 @@
+
+/* 	buttons have weird properties.
+	in order to evade them, you have to
+	make a container inside (again, ooh boy!)
+
+	and in that container, you can position however you please.
+*/
+
+button {
+	cursor: pointer; // somehow (at least in Safari), it's necessary.
+	margin-left: 0;
+	margin-right: 0;
+	border: none;
+
+	> .frame {
+
+		> .container {
+			.flexbox();
+			.align-items(center);
+			.justify-content(center);
+			> * { .flex(2013; 0; 0; auto); }
+		}
+	}
+}
+
+
+.btn-no-text { .text { display: none; } }
+
+button.btn-no-text { .btn-no-text; }

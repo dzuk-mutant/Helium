@@ -1,0 +1,74 @@
+
+
+
+
+
+
+
+
+input[type="text"], input[type="password"]{
+	-webkit-appearance: none;
+	border: none;
+	width: 0%; // to kill browser bullshit
+}
+
+input.center {
+	text-align: center;
+}
+
+input:focus{
+	outline: none; // stops safari from being a little shit.
+}
+
+
+
+
+
+
+
+
+textarea {
+	border: none;
+}
+
+textarea:focus{
+	outline: none; // stops safari from being a little shit.
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// this might need to be deleted.
+
+.input-c(@c; @hover; @placeholder: fadeout(@c, 50%); @bg: inherit) {
+	input {
+		color: @c;
+		border-color: @c;
+		background-color: @bg;
+		.placeholder(@placeholder);
+
+		&:focus, &:hover {
+			color: @hover;
+			border-color: @hover;
+		}
+	}
+
+	.btn-std {
+		color: @c;
+		border-color: @c;
+		background-color: @bg;
+
+		&:hover{
+			color: @hover;
+			border-color: @hover;
+		}
+	}
+}

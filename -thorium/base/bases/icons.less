@@ -1,0 +1,68 @@
+// base icon style
+// ----------------------------------------
+
+[class*="ic-"] {
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+}
+
+
+
+// icon sizing
+// ----------------------------------------
+
+/*	Series of classes designed to help you quickly make your
+		own classes for styling and controlling icons.
+*/
+
+
+//	size
+
+/* 	use this to create size classes for icons.
+		eg: .size-9 { .size(9px); }
+*/
+
+.size(@dimen) {
+	width: @dimen;
+	height: @dimen;
+}
+
+.size(@h, @v) when (@h >= @v) {
+	font-size: @h;
+	width: @h;
+	height: @v;
+}
+
+.size(@h, @v) when (@h < @v) {
+	font-size: @v;
+	width: @h;
+	height: @v;
+}
+
+
+
+
+
+//	reduce
+
+/* 	clears the padding you make in icons so they can be
+		set to baselines and keylines.
+
+		Set the number of the name of the resulting class
+		to the same as the icon set size.
+
+		eg:
+
+		.size-25 { .size(25px); }
+		.size-25.reduced {.size-25; .reduce(5px); }
+
+		<span class='ic-arrow-left size-25 reduced'></span>
+*/
+
+.reduce(@dimen) {
+	margin: -@dimen;
+}

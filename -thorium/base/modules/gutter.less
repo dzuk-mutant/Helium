@@ -1,0 +1,137 @@
+/*
+
+gutter
+--------------------------------------------------------------------------------
+Gives margins for flexbox items that compensates for the bounds of the container
+- margins will only exist between the items, and not sit along the edges of the
+container.
+
+Use the mixin on the container.
+
+
+
+
+arguments:
+- gutter(<margin>);
+Uniformly gives the same margin to all items.
+
+- gutter(<vertical margin>; <horizontal margin>);
+Gives different horizontal and vertical margins.
+
+*/
+
+
+.gutter(@margin) {
+  	margin-top: -@margin;
+	margin-left: -@margin;
+
+	& > * {
+	  	margin-top: @margin;
+		margin-left: @margin;
+	}
+}
+
+.gutter-pad(@margin) {
+  	margin-top: -@margin;
+	margin-left: -@margin;
+
+	& > * {
+	  	padding-top: @margin;
+		padding-left: @margin;
+	}
+}
+
+
+
+
+
+
+.gutter(@margin-vertical, @margin-horizontal) {
+  	margin-top: -@margin-vertical;
+	margin-left: -@margin-horizontal;
+
+	& > * {
+	  	margin-top: @margin-vertical;
+		margin-left: @margin-horizontal;
+	}
+}
+
+.gutter-pad(@margin-vertical, @margin-horizontal) {
+  	margin-top: -@margin-vertical;
+	margin-left: -@margin-horizontal;
+
+	& > * {
+	  	padding-top: @margin-vertical;
+		padding-left: @margin-horizontal;
+	}
+}
+
+
+
+.gutter-clear {
+  overflow: hidden;
+}
+
+
+
+
+
+
+.gutter-seq(@margin-vertical, @margin-horizontal, @seq) when (@seq = both) {
+	& > * {
+		margin-bottom: @margin-vertical;
+		margin-right: @margin-horizontal;
+
+		&:first-child { margin-bottom: 0; margin-right: 0; }
+		&:last-child { margin-bottom: 0; margin-right: 0; }
+	}
+
+}
+
+.gutter-seq(@margin-vertical, @margin-horizontal, @seq) when (@seq = first) {
+	& > * {
+		margin-bottom: @margin-vertical;
+		margin-right: @margin-horizontal;
+
+		&:first-child { margin-bottom: 0; margin-right: 0; }
+	}
+}
+
+.gutter-seq(@margin-vertical, @margin-horizontal, @seq) when (@seq = last) {
+	& > * {
+		margin-bottom: @margin-vertical;
+		margin-right: @margin-horizontal;
+
+		&:last-child { margin-bottom: 0; margin-right: 0; }
+	}
+}
+
+
+
+
+
+
+
+
+
+.gutter-seq-this(@margin-vertical; @margin-horizontal; @seq) when (@seq = both) {
+		margin-bottom: @margin-vertical;
+		margin-right: @margin-horizontal;
+
+		&:first-child { margin-bottom: 0; margin-right: 0; }
+    &:last-child { margin-bottom: 0; margin-right: 0; }
+}
+
+.gutter-seq-this(@margin-vertical; @margin-horizontal; @seq) when (@seq = first) {
+		margin-bottom: @margin-vertical;
+		margin-right: @margin-horizontal;
+
+		&:first-child { margin-bottom: 0; margin-right: 0; }
+}
+
+.gutter-seq-this(@margin-vertical; @margin-horizontal; @seq) when (@seq = last) {
+		margin-bottom: @margin-vertical;
+		margin-right: @margin-horizontal;
+
+		&:last-child { margin-bottom: 0; margin-right: 0; }
+}

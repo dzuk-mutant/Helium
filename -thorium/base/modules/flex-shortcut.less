@@ -1,0 +1,292 @@
+
+
+//------------------------------------------------------------------------------
+
+
+.flexlinear {
+  .flexbox;
+}
+
+.flexlinear.rows{
+  .flexlinear(rows);
+}
+
+.flexlinear.row-reverse{
+  .flexlinear(row-reverse);
+}
+
+.flexlinear.columns{
+  .flexlinear(columns);
+}
+
+.flexlinear.column-reverse{
+  .flexlinear(column-reverse);
+}
+
+
+
+.flexlinear(@direction) when (@direction = rows) {
+	.flexbox;
+  .flex-direction(rows);
+
+	& > * {
+
+    .flex(2013; 0; 0; auto);
+    .flex(2009; 0.0; 0.0; auto);
+
+  }
+	> .spacer-end { .flex(2013; 1; 1; auto); }
+}
+
+.flexlinear(@direction) when (@direction = row-reverse) {
+	.flexbox;
+  .flex-direction(row-reverse);
+
+	& > * { 		.flex(2013; 0; 0; auto); }
+	> .spacer-end { .flex(2013; 1; 1; auto); }
+}
+
+
+
+
+.flexlinear(@direction) when (@direction = columns) {
+	.flexbox;
+	.flex-direction(column);
+
+	& > * { 		.flex(2013; 0; 0; auto); }
+	> .spacer-end { .flex(2013; 1; 1; auto); }
+}
+
+.spacer-end { .flex(2013; 1; 1; auto); }
+
+.flexlinear(@direction) when (@direction = column-reverse) {
+	.flexbox;
+  .flex-direction(column-reverse);
+
+	& > * { 		.flex(2013; 0; 0; auto); }
+	> .spacer-end { .flex(2013; 1; 1; auto); }
+}
+
+//------------------------------------------------------------------------------
+
+
+
+
+.flexwrap.rows{
+  .flexwrap(rows);
+}
+
+.flexwrap.columns{
+  .flexwrap(columns);
+}
+
+
+
+
+.flexwrap {
+  .flexbox;
+  .flex-wrap(wrap);
+}
+
+.flexwrap(@direction) when (@direction = rows){
+  .flexwrap;
+  .flex-direction(row);
+}
+
+.flexwrap(@direction) when (@direction = columns){
+  .flexwrap;
+  .flex-direction(column);
+}
+
+
+//------------------------------------------------------------------------------
+
+
+/*
+  A flex array whereby all content will stretch to fit
+ remaining space and will wrap only when there is surplus space.
+
+*/
+
+
+
+.flexfit.rows{
+  .flexwrap(rows);
+}
+
+.flexfit.columns{
+  .flexwrap(columns);
+}
+
+
+
+
+.flexfit {
+  .flexbox;
+  .flex-wrap(wrap);
+
+  > * { .flex(2013; 1; 0; auto); }
+}
+
+.flexfit(@direction) when (@direction = rows){
+  .flexfit;
+  .flex-direction(row);
+}
+
+.flexfit(@direction) when (@direction = columns){
+  .flexfit;
+  .flex-direction(row);
+}
+
+
+
+
+//------------------------------------------------------------------------------
+
+
+
+/*
+  Creates a series of boxes with static dimension
+  across the main axis that wrap.
+
+  Similar to display: inline-block;, but without the inherent strangeness.
+
+  To give the main axis dimension, use width/height,
+  depending on the flex-direction.
+*/
+
+
+
+
+.flexblocks.rows{
+  .flexblocks(rows);
+}
+
+.flexblocks.columns{
+  .flexblocks(columns);
+}
+
+
+
+
+
+.flexblocks {
+  .flexbox;
+  .flex-wrap(wrap);
+
+  > * {
+    // The flex-basis is the dimension the boxes will be constrained to always.
+    .flex(2013; 0; 0; auto);
+  }
+}
+
+.flexblocks(@direction) when (@direction = rows) {
+  .flexblocks;
+  .flex-direction(row);
+}
+
+.flexblocks(@direction) when (@direction = columns) {
+  .flexblocks;
+  .flex-direction(column);
+}
+
+
+//------------------------------------------------------------------------------
+
+/*
+  Combined with HTML elements to create the desired effect.
+
+  There must be items with 'dummy' class (invisible items) to
+  create the grid effect.
+
+  You need n-1 hidden blocks for how many items along the main axis you think
+  will fill the container before wrapping.
+
+  You need to specify a direction. You can do this in HTML with the included
+  classes if it's going to be static, or you can use mixins and switch
+  between them if they need to change based on certain circumstances.
+
+*/
+
+
+
+.flexgrid.rows {
+  .flexgrid(rows);
+}
+.flexgrid.columns {
+  .flexgrid(columns);
+}
+
+
+
+
+
+
+.flexgrid {
+  .flexbox;
+  .flex-wrap(wrap);
+
+  > * {
+    // Default styling, to be overriden as desired.
+    // The flex-basis is the minimum width/height all items will keep to.
+    // For most cases, you will probably need a flex-basis.
+    .flex(2013; 1; 1; auto);
+  }
+}
+
+.flexgrid(@direction) when (@direction = rows) {
+
+  .flexgrid;
+
+  > .dummy {
+    // cancel vertical visibility with no height
+    // (width isn't cancelled because that's how it creates the grid effect.)
+    height: 0px;
+
+    // cancel out any vertical padding, margins or borders applied to them.
+    // (horizontal isn't cancelled because that's how it creates the grid
+    // effect.)
+    border-top: none;
+    border-bottom: none;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+}
+
+.flexgrid(@direction) when (@direction = columns) {
+
+  .flexgrid;
+
+  > .dummy {
+    // cancel horizontal visibility with no height
+    // (height isn't cancelled because that's how it creates the grid effect.)
+    width: 0px;
+
+    // cancel out any horizontal padding, margins or borders applied to them.
+    // (vertical isn't cancelled because that's how it creates the grid effect.)
+    border-left: none;
+    border-right: none;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+}
+
+
+//------------------------------------------------------------------------------
+
+
+/*
+  Simple way to center something using flexbox without having to
+  apply all of the styles.
+*/
+
+.flexcenter {
+  .flexbox;
+  .align-items(center);
+  .justify-content(center);
+}
