@@ -53,3 +53,4 @@ Just compile the Less and you are ready to go! :D
 ## Credits
 
 - Uses an edited version of [ProLoser's Flexbox Less](https://github.com/ProLoser/Flexbox.less) (Thorium's has way fewer prefixes because nowadays you just don't need as many).
+- Thanks to Amphetamine on Mastodon for the name idea. (The original name was far less savoury...)
