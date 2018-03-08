@@ -8,7 +8,7 @@ Thorium is not *really* a boilerplate system, merely an array of prebuilt pieces
 
 This is also like, very much a personal project and isn't structured in the best way. So be careful about that.
 
-This is used to design and construct sites like [Mutant Standard](https://mutant.tech)'s.
+This is used to design and construct sites like [Mutant Standard](https://mutant.tech) and [instances.noct.zone](http://instances.noct.zone).
 
 ---
 
