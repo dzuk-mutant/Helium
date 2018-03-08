@@ -25,3 +25,18 @@
 	html[dir='ltr'] & { padding-left: @l; }
 	html[dir='rtl'] & { padding-right: @l; }
 }
+
+
+.text-align-start {
+	// a substitution for text-align: start;
+	// until it becomes widely available.
+	html[dir='ltr'] & { text-align: left; }
+	html[dir='rtl'] & { text-align: right; }
+}
+
+.text-align-end {
+	// a substitution for text-align: end;
+	// until it becomes widely available.
+	html[dir='ltr'] & { text-align: right; }
+	html[dir='rtl'] & { text-align: left; }
+}
