@@ -1,0 +1,76 @@
+
+
+
+
+.gutter-seq-this(@margin-vertical; @margin-horizontal; @seq) when (@seq = both) {
+		margin-bottom: @margin-vertical;
+		margin-right: @margin-horizontal;
+
+		&:first-child { margin-bottom: 0; margin-right: 0; }
+    &:last-child { margin-bottom: 0; margin-right: 0; }
+}
+
+.gutter-seq-this(@margin-vertical; @margin-horizontal; @seq) when (@seq = first) {
+		margin-bottom: @margin-vertical;
+		margin-right: @margin-horizontal;
+
+		&:first-child { margin-bottom: 0; margin-right: 0; }
+}
+
+.gutter-seq-this(@margin-vertical; @margin-horizontal; @seq) when (@seq = last) {
+		margin-bottom: @margin-vertical;
+		margin-right: @margin-horizontal;
+
+		&:last-child { margin-bottom: 0; margin-right: 0; }
+}
+
+
+
+
+.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = forward) and (@seq = last) {
+
+	html[dir='ltr'] & { margin-right: @distance; }
+	html[dir='rtl'] & { margin-left: @distance; }
+
+	&:last-child {
+		html[dir='ltr'] & { margin-right: 0; }
+		html[dir='rtl'] & { margin-left: 0; }
+	}
+
+}
+
+.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = backward) and (@seq = last) {
+
+	html[dir='ltr'] & { margin-left: @distance; }
+	html[dir='rtl'] & { margin-right: @distance; }
+
+	&:last-child {
+		html[dir='ltr'] & { margin-right: 0; }
+		html[dir='rtl'] & { margin-left: 0; }
+	}
+
+}
+
+.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = forward) and (@seq = first) {
+
+	html[dir='ltr'] & { margin-right: @distance; }
+	html[dir='rtl'] & { margin-left: @distance; }
+
+	&:first-child {
+		html[dir='ltr'] & { margin-right: 0; }
+		html[dir='rtl'] & { margin-left: 0; }
+	}
+
+}
+
+.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = backward) and (@seq = first) {
+
+	html[dir='ltr'] & { margin-left: @distance; }
+	html[dir='rtl'] & { margin-right: @distance; }
+
+	&:first-child {
+		html[dir='ltr'] & { margin-right: 0; }
+		html[dir='rtl'] & { margin-left: 0; }
+	}
+
+}

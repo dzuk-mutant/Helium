@@ -1,0 +1,27 @@
+
+// these mixins allow you to simply designate horizontal margins and
+// paddings that will flip depending on reading direction.
+
+// forward = the reading direction of the script.
+// backward = the reverse reading direction of the script.
+
+.margin-forward(@l) {
+	html[dir='ltr'] & { margin-right: @l; }
+	html[dir='rtl'] & { margin-left: @l; }
+}
+
+.margin-backward(@l) {
+	html[dir='ltr'] & { margin-left: @l; }
+	html[dir='rtl'] & { margin-right: @l; }
+}
+
+
+.padding-forward(@l) {
+	html[dir='ltr'] & { padding-right: @l; }
+	html[dir='rtl'] & { padding-left: @l; }
+}
+
+.padding-backward(@l) {
+	html[dir='ltr'] & { padding-left: @l; }
+	html[dir='rtl'] & { padding-right: @l; }
+}
