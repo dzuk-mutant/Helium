@@ -32,18 +32,11 @@
 	height: @dimen;
 }
 
-.size(@h, @v) when (@h >= @v) {
+.size(@h, @w) {
 	font-size: @h;
-	width: @h;
-	height: @v;
+	width: @w;
+	height: @h;
 }
-
-.size(@h, @v) when (@h < @v) {
-	font-size: @v;
-	width: @h;
-	height: @v;
-}
-
 
 
 
