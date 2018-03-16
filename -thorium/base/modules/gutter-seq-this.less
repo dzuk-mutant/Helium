@@ -27,19 +27,10 @@
 
 
 
-.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = forward) and (@seq = last) {
 
-	html[dir='ltr'] & { margin-right: @distance; }
-	html[dir='rtl'] & { margin-left: @distance; }
 
-	&:last-child {
-		html[dir='ltr'] & { margin-right: 0; }
-		html[dir='rtl'] & { margin-left: 0; }
-	}
 
-}
-
-.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = backward) and (@seq = last) {
+.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = start) and (@seq = last) {
 
 	html[dir='ltr'] & { margin-left: @distance; }
 	html[dir='rtl'] & { margin-right: @distance; }
@@ -51,10 +42,23 @@
 
 }
 
-.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = forward) and (@seq = first) {
+.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = end) and (@seq = last) {
 
 	html[dir='ltr'] & { margin-right: @distance; }
 	html[dir='rtl'] & { margin-left: @distance; }
+
+	&:last-child {
+		html[dir='ltr'] & { margin-right: 0; }
+		html[dir='rtl'] & { margin-left: 0; }
+	}
+
+}
+
+
+.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = start) and (@seq = first) {
+
+	html[dir='ltr'] & { margin-left: @distance; }
+	html[dir='rtl'] & { margin-right: @distance; }
 
 	&:first-child {
 		html[dir='ltr'] & { margin-right: 0; }
@@ -63,10 +67,10 @@
 
 }
 
-.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = backward) and (@seq = first) {
+.gutter-seq-this-bidir(@dir, @distance, @seq) when (@dir = end) and (@seq = first) {
 
-	html[dir='ltr'] & { margin-left: @distance; }
-	html[dir='rtl'] & { margin-right: @distance; }
+	html[dir='ltr'] & { margin-right: @distance; }
+	html[dir='rtl'] & { margin-left: @distance; }
 
 	&:first-child {
 		html[dir='ltr'] & { margin-right: 0; }
