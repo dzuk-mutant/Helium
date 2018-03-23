@@ -8,7 +8,7 @@ Thorium is not *really* a boilerplate system, merely an array of prebuilt pieces
 
 This is also like, very much a personal project and isn't structured in the best way. So be careful about that.
 
-This has been used to make things like [Pineapple](https://github.com/dzuk-mutant/pineapple), [Mutant Standard](https://mutant.tech) and [instances.noct.zone](http://instances.noct.zone).
+This has been used to make things like [Pineapple](https://github.com/dzuk-mutant/pineapple), [Mutant Standard's website](https://mutant.tech) and [instances.noct.zone](http://instances.noct.zone).
 
 ---
 
