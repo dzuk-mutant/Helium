@@ -21,7 +21,7 @@ Device examples:
 iPhone SE, iPod touch, Galaxy S1 - 2, various older and compact handsets.
 
 #### Medium handheld devices (4.5 - 5.5")
-iPhone and iPhone Plus, Google Pixel, Galaxy S3/S5 edge onwards.
+iPhone >6, Google Pixel, Galaxy S3/S5.
 
 #### Large handheld devices (5.5 - 6.5")  
 iPhone >6 Plus, Google Pixel XL, Galaxy S6+/edge+ onwards, Galaxy Note.

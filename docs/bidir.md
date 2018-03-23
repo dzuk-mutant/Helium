@@ -1,10 +1,10 @@
-# Bidirectional
+# Bidirectionality
 
-Flexbox really goes a long way to making interfaces that work bidirectionally by default, but some CSS styles don't have such features yet.
+Flexbox really goes a long way to making interfaces that work in a bidirectional way by default, but some CSS styles don't have such features yet.
 
-This is where bidirectional styles come in. These are simple shortcuts that just switch horizontal direction depending on the set `dir` (either `ltr` or `rtl`) of the `<html>` tag.
+This is where these bidirectional mixins come in. These are simple shortcuts that just switch horizontal direction depending on the set `dir` (either `ltr` or `rtl`) of the `<html>` tag.
 
-Your HTML needs a set direction, else these styles won't work.
+Your `<html>` needs a set `dir`, else these styles won't work.
 
 ---
 

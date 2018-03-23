@@ -71,7 +71,9 @@ These are variants of `gutter-seq` and `gutter-seq-this` for bidirectional inter
 
 Because bidirectionality only applies to horizontal metrics, these mixins only work horizontally.
 
-(Check out the documentation on Bidirectionality for more information on that kind of stuff)
+Also like other bidirectional mixins, there needs to be a set `dir` on the `<html>` tag for these to work.
+
+(Look at [bidirectionality](bidir.md) for more information on that kind of stuff)
 
 `.gutter-seq-bidir(@dir, @distance, @seq)`
 
