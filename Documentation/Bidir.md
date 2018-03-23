@@ -1,4 +1,4 @@
-#Bidirectional
+# Bidirectional
 
 Flexbox really goes a long way to making interfaces that work bidirectionally by default, but some CSS styles don't have such features yet.
 
@@ -46,4 +46,4 @@ Determine horizontal padding and margins based on the element's position relativ
 
 Thorium's gutter is already bidirectional, but `gutter-seq` and `gutter-seq-this` are not, so there are bidirectional variants of these that work similarly to the margin mixins above.
 
-Check out the gutter documentation for more information on these.
+Check out the [gutter documentation](gutter.md) for more information on these.

@@ -1,4 +1,4 @@
-##Display
+## Display
 Because unfortunately, there is no concrete/watertight way of detecting touch devices in web programming, the naming conventions assume device form factor primarily (as opposed to snapped apps in narrow form factor Windows 8/10 or macOS 10.11+, although they get a mention too). 
 
 Display consolidates various form factors into buckets based on width. It has fine presets which are then grouped into larger buckets.
@@ -13,25 +13,29 @@ Display consolidates various form factors into buckets based on width. It has fi
 | @wide-1 | 900px | 1299px | Small tablets in landscape, Small desktop displays (1024x768, 1280x800 etc.), Regular tablets in landscape, Large tablets in portrait, 720p Televisions.
 | @wide-2 | 1300dp | none | Large desktop displays (~1080p/4K, etc.), Large (13") tablets in landscape.
 
+---
+
 Device examples:
 
-**Small handheld devices (<4.5")**  
+#### Small handheld devices (<4.5")
 iPhone SE, iPod touch, Galaxy S1 - 2, various older and compact handsets.
 
-**Medium handheld devices (4.5 - 5.5")**  
+#### Medium handheld devices (4.5 - 5.5")
 iPhone and iPhone Plus, Google Pixel, Galaxy S3/S5 edge onwards.
 
-**Large handheld devices (5.5 - 6.5")**  
+#### Large handheld devices (5.5 - 6.5")  
 iPhone >6 Plus, Google Pixel XL, Galaxy S6+/edge+ onwards, Galaxy Note.
 
-**Small tablets (7 - 8")**  
+#### Small tablets (7 - 8")
 Nexus 7, NVIDIA SHIELD, most tablets between 7 and 8".
   
-**Regular tablets (8 - 10")**  
+#### Regular tablets (8 - 10")
 iPad mini, iPad Air, Nexus 9, Pixel C, most tablets between 8 and 10".
 
-**Large/'Pro' tablets (>10")**  
+#### Large/'Pro' tablets (>10")
 iPad Pro, Surface Pro, most tablets larger than 10".
+
+---
 
 Display modes are then grouped up into larger buckets when you want to make sweeping changes across multiple similar display boundaries.
 
