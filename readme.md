@@ -4,7 +4,7 @@ Thorium is an experimental, small [Stylus]() framework designed for immersive, r
 
 Thorium is mostly just an array of prebuilt pieces and a variety of specific overrides to flatten out certain CSS behaviours. It also encourages a hearty use of Flexbox.
 
-This doesn't do polyfills and doesn't support browsers from more than 5 years ago (as a general rule, some are much sooner). I try to aim for stuff that's at least 90% compatible in the present according to caniuse.com.
+This doesn't intentionally support browsers from more than 5 years ago (as a general rule, some are much sooner). I try to aim for stuff that's at least 90% compatible in the present according to caniuse.com.
 
 This is also a personal project and isn't necessarily structured in the best way or totally stable. So be careful about that.
 
