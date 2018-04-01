@@ -9,7 +9,13 @@ Because Thorium is designed with full-screen software design in mind, screen siz
 
 The boundaries were developed from researching a lot of different devices' virtual display sizes as would be seen by a web browser.
 
+Due to a quirk in Stylus' handling of @media variables, you have to access display boundary variables from arrays. There are two different arrays, one for width, and one for height.
 
+**sw** (array of width variables)  
+ie. `@media sw.handset-3`
+
+**sh**	(array of height variables)  
+ie. `@media sh.limited`
 
 ### Display width groups
 
@@ -47,7 +53,7 @@ The boundaries were developed from researching a lot of different devices' virtu
 
 ---
 
-###Device examples:
+### Device examples:
 
 ##### Small handheld devices (<4.5")
 Apple iPhone SE.
