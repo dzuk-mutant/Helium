@@ -1,0 +1,50 @@
+@import '../../_thorium/_thorium.styl'
+
+
+
+.width-label
+	user-select: none
+	position: sticky
+	text-align: start
+	//transform: scaleX(-1)
+
+	@media sw.handset
+		&:after
+			content: ('handset')
+
+	@media sw.portable
+		&:after
+			content: ('portable')
+
+	@media sw.wide
+		&:after
+			content: ('wide')
+
+
+.height-label
+	user-select: none
+	position: sticky
+	text-align: start
+
+	@media sh.limited
+		&:after
+			content: ('limited')
+
+	@media sh.medium
+		&:after
+			content: ('medium')
+
+	@media sh.tall
+		&:after
+			content: ('tall')
+
+
+.hi
+	flexblocks(row)
+
+	> *
+		flex-basis: rpx(150)
+		height: rpx(150)
+		margin-end: rpx(12)
+		margin-bottom: rpx(12)
+		background-color: #000000

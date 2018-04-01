@@ -1,0 +1,55 @@
+@import '../../_thorium/_thorium.styl'
+
+body
+	background-color: #000
+	color: #fff
+
+.boundary
+	start: 0
+	top: 0
+	position: fixed
+	background-color: rgba(200, 20, 20, 0.1)
+	align-items: flex-end
+
+.boundary.h
+	width: 100%
+	flexlinear(row)
+
+.boundary.w
+	height: 100%
+	flexlinear(column)
+
+.boundary.w.handset-1
+	width: 350px
+
+.boundary.w.handset-2
+	width: 400px
+
+.boundary.w.handset-3
+	width: 500px
+
+.boundary.w.portable-1
+	width: 650px
+
+.boundary.w.portable-2
+	width: 850px
+
+.boundary.w.portable-3
+	width: 1050px
+
+.boundary.w.wide-1
+	width: 1500px
+
+.boundary.w.wide-2
+	min-width: 1600px
+	width: 100%
+
+.boundary.h.limited
+	height: 500px
+
+.boundary.h.medium
+	height: 850px
+
+.boundary.h.tall
+	min-height: 900px
+	height: 100%

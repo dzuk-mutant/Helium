@@ -1,0 +1,54 @@
+
+
+[class*="ic-"]
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+
+
+//	size
+
+/* 	use this to create quick sizes for icons and other things.
+
+		icon class example:
+		.size-9 { size(9px) }
+*/
+
+size(dimen)
+	font-size: dimen
+	width: dimen
+	height: dimen
+
+size(h, w)
+	font-size: h
+	width: w
+	height: h
+
+
+
+
+//	reduce
+
+/* 	clears the padding you make in icons so they can be
+		set to baselines and keylines.
+
+		Set the number of the name of the resulting class
+		to the same as the icon set size.
+
+		eg:
+
+		.size-25 { size(25px) }
+		.size-25.reduced { size(25px) size-reduce(5px) }
+
+		<span class='ic-arrow-left size-25 reduced'></span>
+*/
+
+size-reduce(dimen)
+	margin: -dimen
+
+size-reduce(h, w)
+	margin: -h -w

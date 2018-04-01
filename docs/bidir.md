@@ -9,41 +9,59 @@ Your `<html>` needs a set `dir`, else these styles won't work.
 ---
 
 
-### text-align-start, text-align-end
-This is an interim replacement for `text-align: start` and `text-align: end`, which is a flow-relative solution to text-alignment (rather than the absolute values of `left` and `right`), which aren't compatible in enough browser yet to be really usable.
+### text-align: start/end
+There are experimental values for `text-align` in CSS whereby you can align the text horizontally in a way that is relative to the reading flow, but unfortunately these aren't supported by all browsers.
 
-These mixins will just flip between the `left` and `right` values depending on the flow.
+With Thorium, you can use `text-align: start/end` and Thorium will automatically place a polyfill.
 
-<br/>
+```
+.blah
+	text-align: end
 
-`.text-align-start;` 
+.blah
+	html[dir='ltr'] & { text-align: right }
+	html[dir='rtl'] & { text-align: left }
 
-Makes the text align to the start of the flow.
-
-<br/>
-
-`.text-align-end;` 
-
-Makes the text align to the end of the flow.
+```
 
 ---
 
 ### margin-start, margin-end, padding-start, padding-end
-Determine horizontal padding and margins based on the element's position relative to reading flow.
+Create horizontal padding and margins that are relative to the reading flow.
 
 ```
 
-.margin-start(length);
-.margin-end(length);
-.padding-start(length);
-.padding-end(length);
+.sigh
+	margin-start: 420.69px
+
+.sigh
+	html[dir='ltr'] & { margin-left: 420.69px }
+	html[dir='rtl'] & { margin-right: 420.69px }
 
 ```
 
 ---
 
-### gutter-seq-bidir, gutter-seq-this-bidir
+### start/end
 
-Thorium's gutter is already bidirectional, but `gutter-seq` and `gutter-seq-this` are not, so there are bidirectional variants of these that work similarly to the margin mixins above.
+Create fixed/absolute positioning relative to the reading flow.
 
-Check out the [gutter documentation](gutter.md) for more information on these.
+```
+
+.jort
+	end: 666px
+	
+	
+.jort
+	html[dir='ltr'] & { right: 666px }
+	html[dir='rtl'] & { left: 666px }
+
+
+```
+
+
+---
+
+### gutter-seq
+
+gutter-seq also has bidirectional aspects that you can implement in your designs. Check [the documentation on gutters](gutter.md) for more information.

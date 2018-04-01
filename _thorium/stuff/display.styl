@@ -1,0 +1,212 @@
+// helpers
+// ----------------------
+
+minlen(axis, val)
+	"(min-" + axis + ": "+ val +")"
+
+maxlen(axis, val)
+	"(max-" + axis + ": "+ val +")"
+
+min-maxlen(axis, minval, maxval)
+	minlen(axis, minval) + " and " + maxlen(axis, maxval)
+
+screen-min(axis, val)
+	"screen and " + minlen(axis, val)
+
+screen-max(axis, val)
+	"screen and " + maxlen(axis, val)
+
+screen-min-max(axis, minval, maxval)
+	'screen and ' + min-maxlen(axis, minval, maxval)
+
+
+// horizontal dimensions
+// ----------------------
+
+
+// fuckin' huge
+// 1400dp+
+
+// 1080p, big-ass laptop and desktop displays.
+
+wide-2-min = 1500px
+
+
+// wide-1
+// 1050 - 1499dp
+
+// 720p, widescreen laptop resolutions, bigass tablets in landscape.
+
+wide-1-min = 1050px
+wide-1-max = wide-2-min - 1px
+
+
+
+// portable-3
+// 850 - 1049dp
+
+// big-ass tablets in portrait (~13").
+
+portable-3-min = 850px
+portable-3-max = wide-1-min - 1px
+
+
+
+// portable-2
+// 650 - 849dp
+
+// standard-size tablets in portrait (~8-10")
+
+portable-2-min = 650px
+portable-2-max = portable-3-min - 1px
+
+
+
+// portable-1
+// 500 - 649dp
+
+// flyer-sized tablets in portrait (7-8")
+
+portable-1-min = 500px
+portable-1-max = portable-2-min - 1px
+
+
+
+// handset-3
+// 400 - 499dp
+
+// this means that you can hold it in one hand
+// but not really use it with one hand.
+
+handset-3-min = 400px
+handset-3-max = portable-1-min - 1px
+
+
+
+// handset-2
+// 350 - 399dp
+
+// this means that you can hold it in one hand
+// but can't reach everywhere with one hand.
+
+handset-2-min = 350px
+handset-2-max = handset-3-min - 1px
+
+
+
+// handset-1
+// 0 - 349dp
+
+// this means that you can hold it in one hand
+// and reach everywhere with one hand.
+
+handset-1-min = 0px
+handset-1-max = handset-2-min - 1px
+
+
+
+
+
+// vertical dimensions
+// ----------------------
+
+// tall
+// 850dp+
+
+// standard-size tablets in portrait (~8-10")
+
+tall =					850px
+
+
+
+// medium
+// 500 - 849dp
+
+// 720p, tablets and laptop displays in landscape.
+
+medium = 					500px
+medium-max =			tall - 1px
+
+
+
+// limited
+// 0 - 499dp
+
+// handsets in landscape.
+
+limited = 				0px
+limited-max =			medium - 1px
+
+
+
+
+
+
+// display buckets
+// ----------------------
+
+
+handset-1 =			screen-max(width, handset-1-max)
+handset-2 =			screen-min-max(width, handset-2-min, handset-2-max)
+handset-3 =			screen-min-max(width, handset-3-min, handset-3-max)
+
+portable-1 =		screen-min-max(width, portable-1-min, portable-1-max)
+portable-2 =		screen-min-max(width, portable-2-min, portable-2-max)
+portable-3 =   	screen-min-max(width, portable-3-min, portable-3-max)
+
+wide-1 =      	screen-min-max(width, wide-1-min, wide-1-max)
+wide-2 =     		screen-min(width, wide-2-min)
+
+
+
+
+
+// display groups
+// ----------------------
+
+handset-min = 	handset-1-min
+handset-max = 	handset-3-max
+portable-min = 	portable-1-min
+portable-max = 	portable-3-max
+wide-min = 			wide-1-min
+
+handset =		screen-max(width, handset-max)
+portable = 	screen-min-max(width, portable-min, portable-max)
+wide = 			screen-min(width, wide-min)
+
+
+limited =		screen-max(height, limited-max)
+medium = 		screen-min-max(height, medium, medium-max)
+tall = 			screen-min(height, tall)
+
+
+
+
+
+// working around things
+// ----------------------
+
+// https://github.com/stylus/stylus/issues/2292
+
+
+sw = {
+	handset-1: handset-1,
+	handset-2: handset-2,
+	handset-3: handset-3,
+	handset: handset,
+
+	portable-1: portable-1,
+	portable-2: portable-2,
+	portable-3: portable-3,
+	portable: portable,
+
+	wide-1: wide-1,
+	wide-2: wide-2,
+	wide: wide
+}
+
+sh = {
+	limited: limited,
+	medium: medium,
+	tall: tall,
+}

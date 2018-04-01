@@ -1,0 +1,54 @@
+body
+	margin: 0
+	padding: 0
+	antialiased-fonts()
+
+
+
+
+
+input[type="text"], input[type="password"]
+	-webkit-appearance: none
+	border: none
+	width: 0% // to kill browser BS
+
+input:focus
+	outline: none // stops safari from being a little shit.
+
+
+
+
+
+
+textarea
+	border: none
+
+textarea:focus
+	outline: none // stops safari from being a little shit.
+
+
+
+
+
+
+/* 	buttons have weird properties.
+	in order to evade them, you have to
+	make a container inside (again, ooh boy!)
+
+	and in that container, you can position however you please.
+*/
+
+button
+	cursor: pointer // somehow (at least in Safari), it's necessary.
+	margin-left: 0
+	margin-right: 0
+	border: none
+
+	> .frame
+		> .container
+			display: flex
+			align-items: center
+			justify-content: center
+
+			> *
+				flex: 0, 0, auto

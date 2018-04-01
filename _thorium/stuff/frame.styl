@@ -1,0 +1,21 @@
+/*
+	Frame is a simple, but foundational element.
+
+	It is designed to constrain contained items with it's boundaries,
+	so borders, padding, etc. do not increase the size of the visible
+	element.
+
+	Dunno if it's really that useful anymore. Keeping it for legacy support right now.
+*/
+
+.frame {
+	height: 100%
+	width: 100%
+	overflow: hidden // default behaviour
+	display: flex
+
+	> .container {
+		flex: 1, 1, auto // default behaviour
+		align-self: stretch // default behaviour
+	}
+}

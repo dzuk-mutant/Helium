@@ -1,0 +1,232 @@
+
+// iterator
+flex-shortcut-directions = default row row-reverse column column-reverse
+flex-all-directions = row row-reverse column column-reverse
+
+
+ensure-flex-dir(direction)
+	unless direction in flex-shortcut-directions
+		error("Your flex mixin needs 'row', 'row-reverse', 'row', 'row-reverse' or 'default'. You gave '" + direction + "'.")
+
+
+control-flex-kw(direction)
+	if direction == "default"
+		row
+	else
+		direction
+
+
+/*
+	flexlinear
+
+  A default flex that explicitly does not wrap.
+*/
+
+flexlinear(direction)
+	ensure-flex-dir(direction)
+	dir = control-flex-kw(direction)
+
+	display: flex
+	flex-direction: dir
+
+	& > *
+		flex: 0 0 auto
+
+	> .spacer-end
+		flex: 1 1 auto !important
+
+
+
+.flexlinear
+	for dir in flex-shortcut-directions
+		if dir == default
+			&
+				flexlinear(dir)
+		else
+			&.{dir}
+				flexlinear(dir)
+
+
+
+/*
+	flexwrap
+
+  A default flex that explicitly wraps.
+*/
+
+flexwrap(direction)
+	ensure-flex-dir(direction)
+	dir = control-flex-kw(direction)
+
+	display: flex
+	flex-direction: dir
+	flex-wrap: wrap
+
+
+.flexwrap
+	for dir in flex-shortcut-directions
+		if dir == default
+			&
+				flexwrap(row)
+		else
+			&.{dir}
+				flexwrap(dir)
+
+
+
+
+
+
+
+
+/*
+	flexfit
+
+  A flex array whereby all content will stretch to fit
+	remaining space and will wrap only when there is surplus space.
+*/
+
+
+
+flexfit(direction)
+	ensure-flex-dir(direction)
+	dir = control-flex-kw(direction)
+
+	display: flex
+	flex-direction: dir
+	flex-wrap: wrap
+	> * { flex: 1 0 auto }
+
+.flexfit
+	for dir in flex-shortcut-directions
+		if dir == default
+			&
+				flexfit(row)
+		else
+			&.{dir}
+				flexfit(dir)
+
+
+
+/*
+	flexblocks
+
+
+  Creates a series of boxes with static dimension
+  across the main axis that wrap.
+
+  Similar to display: inline-block;, but without the inherent strangeness.
+
+  To give the main axis dimension, use width/height,
+  depending on the flex-direction.
+*/
+
+flexblocks(direction)
+	ensure-flex-dir(direction)
+	dir = control-flex-kw(direction)
+
+	display: flex
+	flex-direction: dir
+	flex-wrap: wrap
+
+	// the flex-basis is the dimension the children
+	// will always be constrained to.
+	& > * { flex: 0 0 auto }
+
+
+.flexblocks
+	for dir in flex-shortcut-directions
+		if dir == default
+			&
+				flexblocks(row)
+		else
+			&.{dir}
+				flexblocks(dir)
+
+
+
+
+/*
+	flexgrid
+
+	Creates a flexible grid whose rows/columns change
+	depending on container width.
+
+*/
+
+
+/*
+  Combined with HTML elements to create the desired effect.
+
+  There must be items with 'dummy' class (invisible items) to
+  create the grid effect.
+
+  You need n-1 hidden blocks for how many items along the main axis you think
+  will fill the container before wrapping.
+
+  You need to specify a direction. You can do this in HTML with the included
+  classes if it's going to be static, or you can use mixins and switch
+  between them if they need to change based on certain circumstances.
+*/
+
+
+flexgrid(direction)
+	ensure-flex-dir(direction)
+	dir = control-flex-kw(direction)
+
+	display: flex
+	flex-direction: dir
+	flex-wrap: wrap
+	& > * { flex: 1 1 auto }
+
+	if dir == row or dir == row-reverse
+		> .dummy
+			// cancel all vertical metrics
+			// (horizontal isn't cancelled because it creates the grid effect)
+			height: 0 !important
+			border-top: 0 !important
+			border-bottom: 0 !important
+			margin-top: 0 !important
+			margin-bottom: 0 !important
+			padding-top: 0 !important
+			padding-bottom: 0 !important
+
+	else if dir == column or dir == column-reverse
+		> .dummy
+			// cancel all horizontal metrics
+			// (vertical isn't cancelled because it creates the grid effect)
+			width: 0 !important
+			border-left: 0 !important
+			border-right: 0 !important
+			margin-left: 0 !important
+			margin-right: 0 !important
+			padding-left: 0 !important
+			padding-right: 0 !important
+
+
+
+.flexgrid
+	for dir in flex-shortcut-directions
+
+		// you have to specify a direction, so there can't
+		// be a default blank style here.
+		if dir != default
+			&.{dir}
+				flexgrid(dir)
+
+
+
+/*
+	flexcenter
+
+  simple centering shortcut using flexbox.
+*/
+
+flexcenter() {
+	display: flex
+	align-items: center
+	justify-content: center
+}
+
+.flexcenter
+	flexcenter()

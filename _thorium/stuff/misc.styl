@@ -1,0 +1,69 @@
+
+antialiased-fonts()
+	// makes sure that fonts look nice on macOS.
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+
+
+
+// yummy prefixes
+
+
+
+user-select(val)
+	if val == none
+		user-select: val;
+		-webkit-user-select: val; // Safari, Samsung Internet
+		-moz-user-select: val; // Firefox
+		-ms-user-select: val; // Edge, IE
+
+	else
+		user-select: val
+		// THIS IS IMPORTANT. ELSE THIS FUNCTION
+		// WILL JUST EAT ANY OTHER VALUE AND NOT SHOW ANYTHING
+
+
+
+
+
+position(val)
+	if val == sticky
+	// this isn't that compatible yet.
+
+		position: val
+		position: -webkit- + val
+		// it's just WebKit. :|
+
+	else
+		position: val
+		// THIS IS IMPORTANT. ELSE THIS FUNCTION
+		// WILL JUST EAT ANY OTHER VALUE AND NOT SHOW ANYTHING
+
+
+
+transform(args...)
+	transform: args
+	-webkit-transform: args // for Android 4.4 browser.
+
+animation(args...)
+	transform: args
+	-webkit-animation: args // for Android 4.4 browser.
+
+
+
+// yummy block prefixes
+
+placeholder()
+	&::placeholder
+		{block}
+	&::-webkit-input-placeholder // Android 4 browser, Safari 9 and 10.2, Samsung Internet
+		{block}
+	&::-ms-input-placeholder // Edge
+		{block}
+	&:-ms-input-placeholder // IE 11
+		{block}
+
+
+
+
+// NUM NUMS

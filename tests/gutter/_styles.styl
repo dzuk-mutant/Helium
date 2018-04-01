@@ -1,0 +1,43 @@
+@import '../../_thorium/_thorium.styl'
+
+body
+  margin: rpx(20)
+
+.hithere
+  background-color: #ddd
+  margin-bottom: rpx(40)
+
+
+.gutter-clear
+  overflow: hidden
+
+.test
+  background-color: #aaa
+  > *
+    background: #333
+    color: #fff
+
+.gutter
+  gutter(rpx(20), rpx(20))
+
+.gutter-pad
+  gutter-pad(rpx(20), rpx(20))
+  > *
+    border: 1px solid #666
+
+.gutter-seq
+  gutter-seq(end, rpx(40), last)
+  > *
+    border: 1px solid #666
+
+.gutter-seq-this
+  > *
+    gutter-seq-this(end, rpx(40), last)
+    border: 1px solid #666
+
+
+.flexgrid.row,
+.flexblocks.row
+  > *
+    width: rpx(100px)
+    height: rpx(75)

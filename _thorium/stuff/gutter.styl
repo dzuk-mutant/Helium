@@ -1,0 +1,109 @@
+/*
+
+gutter
+
+Gives margins for flexbox items that compensates
+for the bounds of the container.
+
+Gutters will only exist between the items, and not
+sit along the edges of the container.
+
+Use this mixin on the container.
+
+
+
+arguments:
+- gutter(<margin>);
+Uniformly gives the same margin to all items.
+
+- gutter(<vertical margin>; <horizontal margin>);
+Gives different horizontal and vertical margins.
+
+*/
+
+gutter(l)
+	margin-top: - l
+	margin-left: - l
+
+	& > *
+		margin-top: l
+		margin-left: l
+
+
+
+gutter(y, x)
+	margin-top: - y
+	margin-left: - x
+
+	& > *
+		margin-top: y
+		margin-left: x
+
+
+
+gutter-pad(l)
+	margin-top: - l
+	margin-left: - l
+
+	& > *
+		padding-top: l
+		padding-left: l
+
+
+
+gutter-pad(y, x)
+	margin-top: - y
+	margin-left: - x
+
+	& > *
+		padding-top: y
+		padding-left: x
+
+
+
+/*
+
+gutter-seq / gutter-seq-this
+
+
+Essentially a shortcut for the standard
+first/last-of-child spacing technique.
+
+- gutter-seq is if you want to apply it
+	to a container for all of it's children.
+
+- gutter-seq-this is if you want to apply
+	it to specific items.
+
+You can define this multiple times if
+you need this in multiple directions.
+
+You can also define 'start' and 'end'
+for the direction and it will invoke
+Thorium's bidirectional mixins by
+default.
+
+*/
+
+
+gutter-seq-this(dir, l, seq)
+	margin-{dir}: l
+
+	if seq == both
+		&:first-child
+			margin-{dir}: none
+		&:last-child
+			margin-{dir}: none
+
+	else if seq == first
+		&:first-child
+			margin-{dir}: none
+
+	else if seq == last
+		&:first-child
+			margin-{dir}: none
+			
+
+gutter-seq(dir, l, seq)
+	& > *
+		gutter-seq-this(dir, l, seq)

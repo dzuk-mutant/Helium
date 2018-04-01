@@ -1,7 +1,0 @@
-All licenses
-
-Normalize.css is licensed under an MIT license.
-see Normalise.txt for the full license.
-
-All other components are licensed under MIT.
-See Thorium.txt for the full license.

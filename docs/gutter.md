@@ -2,40 +2,75 @@
 
 Gutters are mixins that give you convenient ways to space out items.
 
-## .gutter
+## gutter()
 
-The `.gutter` class adds 2D spacing to an array of objects, designed especially for flexbox items. This class ensures that all items within a container have even spacing in between them, but no spacing on the edges of the container.
+The `gutter()` mixin adds 2D spacing to an array of objects, designed especially for flexbox items. This class ensures that all items within a container have even spacing in between them, but no spacing on the edges of the container.
 
-`.gutter` must be applied to a container to be applied to items.
-
-Additionally (and unfortunately), there must either be a container outside that container with a `.gutter-clear` class (which is just `overflow: hidden;`) or a **frame** enclosing it. This is because to make the spacing work, Gutter applies positive margins to the items and a negative margin to the container, and that negative margin on the container will affect the flow of objects around it if it is not cancelled out. ¯\\\_(ツ)_/¯
 
 
 ### Implementation
 
-There are both `.gutter` and `.gutter-pad` classes for different positioning scenarios.
+`gutter()` must be applied to the container.
 
-As the name implies, `.gutter-pad` is a version where the items use padding rather than margin to create the gutter. However, both use negative margins for the container.
+```
+.container
+	gutter(10px 20px)
+	
+.container
+	margin-top: - 10px
+	margin-left: - 20px
+
+	& > *
+		margin-top: 10px
+		margin-left: 20px
+
+
+```
+
+There are both `gutter()` and `gutter-pad()` classes for different positioning scenarios.
+
+- `gutter()` uses margins to space the items.
+- `gutter-pad()` uses padding to space the items.
+- Both still apply negative margins to the container.
+
+
+There must be a container outside the container with a `overflow: hidden`. This is because to make the spacing work, `gutter()` applies positive margins to the items and a negative margin to the container, and that negative margin on the container will affect the flow of objects around it if it is not cancelled out by something surrounding it.
+
+```
+<div style='overflow: hidden`>
+	<div class='this-has-a-gutter-mixin'>
+		<div>...</div>
+		<div>...</div>
+		<div>...</div>
+		<div>...</div>
+	</div>
+</div>
+
+```
+
+You can also choose to space each axis differently, or space them both in the same way:
 
 #### Even spacing across both axes
 
-`.gutter(@margin);`
+`gutter(val)`
 
-`.gutter-pad(@margin);`
+`gutter-pad(val)`
 
-Even spacing across both axes.
 
 #### Different spacing on each axis
 
-`.gutter(@margin-vertical, @margin-horizontal);`
+`gutter(vertical, horizontal)`
 
-`.gutter-pad(@margin-vertical, @margin-horizontal);`
+`gutter-pad(vertical, horizontal)`
 
-Different spacing across each axis.
+
+#### Bidirectionality
+
+Because what `gutter()` does applies equally in both horizontal directions, it doesn't matter if it applies a left margin, so you can use it in a bidirectional design context without any issues.
 
 ----
 
-## .gutter-seq
+## gutter-seq()
 
 (short for 'Sequential Gutter')
 
@@ -47,38 +82,42 @@ You use this on the container and it is applied to all children.
 
 
 ### Implementation
+There are two variants of gutter-seq:
 
-There is both `gutter-seq` for applying to all of a container's children, and `.gutter-seq-this` for applying to all of a particular class.
+- `gutter-seq()` is applied to a container to affect all it's children.
+- `gutter-seq-this()` is applied to the items themselves.
 
-`.gutter-seq(@margin-vertical, @margin-horizontal, @seq);`
+### Values
 
-`.gutter-seq(@margin-vertical, @margin-horizontal, @seq);`
+`gutter-seq(direction, length, seq)`
 
-`@seq-type` is which object at what end ('first', 'last', 'both') have the margin(s) removed.
+`gutter-seq-this(direction, length, seq)`
 
 
-----
+<br/>
 
-## .gutter-seq-this
+`direction` can be:
 
-Apply a sequential gutter to the elements directly instead of the parent that contains them.
+- `top`
+- `bottom`
+- `left`
+- `right`
+- `start` (start of reading flow)
+- `end` (end of reading flow)
 
-----
+`length` is how much in that direction you want the spacing to be.
 
-## .gutter-seq-bidir, .gutter-seq-this-bidir
 
-These are variants of `gutter-seq` and `gutter-seq-this` for bidirectional interfaces and layouts. Instead of declaring absolute margins, you declare ones that are relative to the reading direction.
+`seq` is where you decide what which object at what end has their margins cancelled out: 
 
-Because bidirectionality only applies to horizontal metrics, these mixins only work horizontally.
 
-Also like other bidirectional mixins, there needs to be a set `dir` on the `<html>` tag for these to work.
+- `first`
+- `last`
+- `both`
+- `none`
 
-(Look at [bidirectionality](bidir.md) for more information on that kind of stuff)
 
-`.gutter-seq-bidir(@dir, @distance, @seq)`
+<br/>
 
-`.gutter-seq-this-bidir(@dir, @distance, @seq)`
+Using `start` or `end` is highly recommended and necessary if you want to make sure your spacing works in a bidirectional design context.
 
-- `@dir` is either `start` or `end`. 
-- `@distance` is the measurement of how much you want that spacing to be (ie. `9px`, `2em`, etc.)
-- `@seq` is the same as the previous mixins - which object at what end (`first`, `last`, `both`) have the margin(s) removed. 
