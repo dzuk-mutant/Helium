@@ -5,17 +5,6 @@ This is a list of changes between this version of Thorium, and the original vers
 Thorium 2 (this version) now uses [Stylus](http://stylus-lang.com) instead of Less. Expect to rewrite your styles because this syntax is different. But it shouldn't be too time-consuming.
 
 
-
-## Additions
-
-### Responsive Pixels (rpx)
-
-This is a very barebones adaptation of [Aral Balkan's Responsive Pixels](https://ar.al/notes/responsive-pixels/) for Stylus (which encouraged me to take a look into moving to Stylus in the first place~~)
-
-Just stick `rpx()` in any value to write a size/position as pixels but actually use `rem` values.
-
----
-
 ## Changes
 
 ### Everything

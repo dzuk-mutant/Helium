@@ -5,18 +5,12 @@
 .flexlinear > * {
   flex: 0 0 auto;
 }
-.flexlinear > .spacer-end {
-  flex: 1 1 auto !important;
-}
 .flexlinear.row {
   display: flex;
   flex-direction: row;
 }
 .flexlinear.row > * {
   flex: 0 0 auto;
-}
-.flexlinear.row > .spacer-end {
-  flex: 1 1 auto !important;
 }
 .flexlinear.row-reverse {
   display: flex;
@@ -25,18 +19,12 @@
 .flexlinear.row-reverse > * {
   flex: 0 0 auto;
 }
-.flexlinear.row-reverse > .spacer-end {
-  flex: 1 1 auto !important;
-}
 .flexlinear.column {
   display: flex;
   flex-direction: column;
 }
 .flexlinear.column > * {
   flex: 0 0 auto;
-}
-.flexlinear.column > .spacer-end {
-  flex: 1 1 auto !important;
 }
 .flexlinear.column-reverse {
   display: flex;
@@ -45,7 +33,7 @@
 .flexlinear.column-reverse > * {
   flex: 0 0 auto;
 }
-.flexlinear.column-reverse > .spacer-end {
+.spacer-end {
   flex: 1 1 auto !important;
 }
 .flexwrap {
@@ -281,11 +269,11 @@ button > .frame > .container > * {
 }
 @import 'external/normalize.css';
 body {
-  margin: 1.25rem;
+  margin: 20px;
 }
 .hithere {
   background-color: #ddd;
-  margin-bottom: 2.5rem;
+  margin-bottom: 40px;
 }
 .gutter-clear {
   overflow: hidden;
@@ -298,29 +286,29 @@ body {
   color: #fff;
 }
 .gutter {
-  margin-top: -1.25rem;
-  margin-left: -1.25rem;
+  margin-top: -20px;
+  margin-left: -20px;
 }
 .gutter > * {
-  margin-top: 1.25rem;
-  margin-left: 1.25rem;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 .gutter-pad {
-  margin-top: -1.25rem;
-  margin-left: -1.25rem;
+  margin-top: -20px;
+  margin-left: -20px;
 }
 .gutter-pad > * {
-  padding-top: 1.25rem;
-  padding-left: 1.25rem;
+  padding-top: 20px;
+  padding-left: 20px;
 }
 .gutter-pad > * {
   border: 1px solid #666;
 }
 html[dir='ltr'] .gutter-seq > * {
-  margin-right: 2.5rem;
+  margin-right: 40px;
 }
 html[dir='rtl'] .gutter-seq > * {
-  margin-left: 2.5rem;
+  margin-left: 40px;
 }
 html[dir='ltr'] .gutter-seq > *:first-child {
   margin-right: none;
@@ -335,10 +323,10 @@ html[dir='rtl'] .gutter-seq > *:first-child {
   border: 1px solid #666;
 }
 html[dir='ltr'] .gutter-seq-this > * {
-  margin-right: 2.5rem;
+  margin-right: 40px;
 }
 html[dir='rtl'] .gutter-seq-this > * {
-  margin-left: 2.5rem;
+  margin-left: 40px;
 }
 html[dir='ltr'] .gutter-seq-this > *:first-child {
   margin-right: none;
@@ -348,6 +336,6 @@ html[dir='rtl'] .gutter-seq-this > *:first-child {
 }
 .flexgrid.row > *,
 .flexblocks.row > * {
-  width: 6.25rem;
-  height: 4.6875rem;
+  width: 100px;
+  height: 75px;
 }

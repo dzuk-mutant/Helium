@@ -32,10 +32,6 @@ flexlinear(direction)
 	& > *
 		flex: 0 0 auto
 
-	> .spacer-end
-		flex: 1 1 auto !important
-
-
 
 .flexlinear
 	for dir in flex-shortcut-directions
@@ -45,6 +41,12 @@ flexlinear(direction)
 		else
 			&.{dir}
 				flexlinear(dir)
+
+
+.spacer-end
+	flex: 1 1 auto !important
+
+
 
 
 

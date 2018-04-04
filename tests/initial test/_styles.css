@@ -5,18 +5,12 @@
 .flexlinear > * {
   flex: 0 0 auto;
 }
-.flexlinear > .spacer-end {
-  flex: 1 1 auto !important;
-}
 .flexlinear.row {
   display: flex;
   flex-direction: row;
 }
 .flexlinear.row > * {
   flex: 0 0 auto;
-}
-.flexlinear.row > .spacer-end {
-  flex: 1 1 auto !important;
 }
 .flexlinear.row-reverse {
   display: flex;
@@ -25,18 +19,12 @@
 .flexlinear.row-reverse > * {
   flex: 0 0 auto;
 }
-.flexlinear.row-reverse > .spacer-end {
-  flex: 1 1 auto !important;
-}
 .flexlinear.column {
   display: flex;
   flex-direction: column;
 }
 .flexlinear.column > * {
   flex: 0 0 auto;
-}
-.flexlinear.column > .spacer-end {
-  flex: 1 1 auto !important;
 }
 .flexlinear.column-reverse {
   display: flex;
@@ -45,7 +33,7 @@
 .flexlinear.column-reverse > * {
   flex: 0 0 auto;
 }
-.flexlinear.column-reverse > .spacer-end {
+.spacer-end {
   flex: 1 1 auto !important;
 }
 .flexwrap {
@@ -347,14 +335,14 @@ html[dir='rtl'] .height-label {
   flex: 0 0 auto;
 }
 .hi > * {
-  flex-basis: 9.375rem;
-  height: 9.375rem;
-  margin-bottom: 0.75rem;
+  flex-basis: 150px;
+  height: 150px;
+  margin-bottom: 12px;
   background-color: #000;
 }
 html[dir='ltr'] .hi > * {
-  margin-right: 0.75rem;
+  margin-right: 12px;
 }
 html[dir='rtl'] .hi > * {
-  margin-left: 0.75rem;
+  margin-left: 12px;
 }

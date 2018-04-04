@@ -5,18 +5,12 @@
 .flexlinear > * {
   flex: 0 0 auto;
 }
-.flexlinear > .spacer-end {
-  flex: 1 1 auto !important;
-}
 .flexlinear.row {
   display: flex;
   flex-direction: row;
 }
 .flexlinear.row > * {
   flex: 0 0 auto;
-}
-.flexlinear.row > .spacer-end {
-  flex: 1 1 auto !important;
 }
 .flexlinear.row-reverse {
   display: flex;
@@ -25,18 +19,12 @@
 .flexlinear.row-reverse > * {
   flex: 0 0 auto;
 }
-.flexlinear.row-reverse > .spacer-end {
-  flex: 1 1 auto !important;
-}
 .flexlinear.column {
   display: flex;
   flex-direction: column;
 }
 .flexlinear.column > * {
   flex: 0 0 auto;
-}
-.flexlinear.column > .spacer-end {
-  flex: 1 1 auto !important;
 }
 .flexlinear.column-reverse {
   display: flex;
@@ -45,7 +33,7 @@
 .flexlinear.column-reverse > * {
   flex: 0 0 auto;
 }
-.flexlinear.column-reverse > .spacer-end {
+.spacer-end {
   flex: 1 1 auto !important;
 }
 .flexwrap {
@@ -170,15 +158,6 @@
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-.flexgrid.row > .dummy {
-  width: 0 !important;
-  border-left: 0 !important;
-  border-right: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
 .flexgrid.row-reverse {
   display: flex;
   flex-direction: row-reverse;
@@ -196,15 +175,6 @@
   padding-top: 0 !important;
   padding-bottom: 0 !important;
 }
-.flexgrid.row-reverse > .dummy {
-  width: 0 !important;
-  border-left: 0 !important;
-  border-right: 0 !important;
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
 .flexgrid.column {
   display: flex;
   flex-direction: column;
@@ -212,15 +182,6 @@
 }
 .flexgrid.column > * {
   flex: 1 1 auto;
-}
-.flexgrid.column > .dummy {
-  height: 0 !important;
-  border-top: 0 !important;
-  border-bottom: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
 }
 .flexgrid.column > .dummy {
   width: 0 !important;
@@ -238,15 +199,6 @@
 }
 .flexgrid.column-reverse > * {
   flex: 1 1 auto;
-}
-.flexgrid.column-reverse > .dummy {
-  height: 0 !important;
-  border-top: 0 !important;
-  border-bottom: 0 !important;
-  margin-top: 0 !important;
-  margin-bottom: 0 !important;
-  padding-top: 0 !important;
-  padding-bottom: 0 !important;
 }
 .flexgrid.column-reverse > .dummy {
   width: 0 !important;
@@ -322,12 +274,12 @@ button > .frame > .container > * {
 }
 .flextest {
   background-color: #aaa;
-  margin-top: -1.25rem;
-  margin-left: -1.25rem;
+  margin-top: -20px;
+  margin-left: -20px;
 }
 .flextest > * {
-  margin-top: 1.25rem;
-  margin-left: 1.25rem;
+  margin-top: 20px;
+  margin-left: 20px;
 }
 .flextest > * {
   background-color: #333;
@@ -340,22 +292,22 @@ button > .frame > .container > * {
   overflow: hidden;
 }
 .flexlinear > * {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 40px;
+  height: 40px;
 }
 .flexblocks > * {
-  width: 12.5rem;
+  width: 200px;
 }
 .flexgrid.row > * {
-  flex-basis: 12.5rem;
+  flex-basis: 200px;
 }
 .flexcenter {
   width: 100%;
   height: 10vh;
 }
 .flexcenter > * {
-  width: 3.125rem;
-  height: 3.125rem;
+  width: 50px;
+  height: 50px;
   background: #000;
 }
 .inner-content {

@@ -21,7 +21,8 @@ Gives different horizontal and vertical margins.
 
 */
 
-gutter(l)
+
+gutter-sq(l)
 	margin-top: - l
 	margin-left: - l
 
@@ -30,8 +31,7 @@ gutter(l)
 		margin-left: l
 
 
-
-gutter(y, x)
+gutter-xy(y, x)
 	margin-top: - y
 	margin-left: - x
 
@@ -40,8 +40,23 @@ gutter(y, x)
 		margin-left: x
 
 
+gutter()
+	len = length(arguments)
 
-gutter-pad(l)
+	if len == 2
+		gutter-xy(arguments[0], arguments[1])
+
+	else if len == 1
+		gutter-sq(arguments[0])
+
+	else
+		xy-length-error("gutter()", len)
+
+
+
+
+
+gutter-pad-sq(l)
 	margin-top: - l
 	margin-left: - l
 
@@ -51,13 +66,28 @@ gutter-pad(l)
 
 
 
-gutter-pad(y, x)
+gutter-pad-xy(y, x)
 	margin-top: - y
 	margin-left: - x
 
 	& > *
 		padding-top: y
 		padding-left: x
+
+
+gutter-pad()
+	len = length(arguments)
+
+	if len == 2
+		gutter-pad-xy(arguments[0], arguments[1])
+
+	else if len == 1
+		gutter-pad-sq(arguments[0])
+
+	else
+		xy-length-error("gutter-pad()", len)
+
+
 
 
 
@@ -102,7 +132,7 @@ gutter-seq-this(dir, l, seq)
 	else if seq == last
 		&:first-child
 			margin-{dir}: none
-			
+
 
 gutter-seq(dir, l, seq)
 	& > *

@@ -3,8 +3,5 @@ All licenses
 Normalize.css is licensed under an MIT license.
 see normalise.txt for the full license.
 
-This uses an adaptation of Responsive Pixels, which is licensed under an MIT license.
-see responsive-pixels.txt for the full license.
-
 All other components are licensed under MIT.
 See thorium.txt for the full license.
