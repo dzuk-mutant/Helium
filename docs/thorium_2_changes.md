@@ -20,6 +20,7 @@ Some key differences to Less (ie. mostly unexpected stuff I learned when I ran i
 - Where we're going, we don't need curly braces or semi-colons. (You can have them if you really want to tho.)
 - To negate a numerical variable's value, put a minus **with a space after it** and then the variable.
 - Variables don't use `@`s before them. They don't necessarily need to have any special characters before them, but if you find that you really need it, use a `$` instead.
+- You can't extend a class with another class by just entering that class. You have to use the `@extend` keyword. (very useful to know for `.spacer-end`~)
 
 ### Flexbox
 
