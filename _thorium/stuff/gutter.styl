@@ -22,6 +22,8 @@ Gives different horizontal and vertical margins.
 */
 
 
+
+
 gutter-sq(l)
 	margin-top: - l
 	margin-left: - l
@@ -121,17 +123,17 @@ gutter-seq-this(dir, l, seq)
 
 	if seq == both
 		&:first-child
-			margin-{dir}: none
+			margin-{dir}: 0
 		&:last-child
-			margin-{dir}: none
+			margin-{dir}: 0
 
 	else if seq == first
 		&:first-child
-			margin-{dir}: none
+			margin-{dir}: 0
 
 	else if seq == last
 		&:first-child
-			margin-{dir}: none
+			margin-{dir}: 0
 
 
 gutter-seq(dir, l, seq)
