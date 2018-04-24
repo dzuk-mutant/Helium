@@ -21,33 +21,33 @@ ie. `@media sh.limited`
 
 | display bucket | min width | max width | analogues |
 |---|--|--|--|
-| handset | none | 499px | Handheld devices (ie. phones) |
-| portable | 500px | 1049px | Most tablet contexts |
-| wide | 1050px | none | Large landscape tablet, laptop, desktop, or TV contexts.  |
+| sw.handset | none | 499px | Handheld devices (ie. phones) |
+| sw.portable | 500px | 1049px | Most tablet contexts |
+| sw.wide | 1050px | none | Large landscape tablet, laptop, desktop, or TV contexts.  |
 
 
 ### Display width areas
 
 | display bucket | min width | max width | analogues |
 |---|--|--|--|
-| handset-1 | none | 349px | Small devices that can be held in one hand, and are entirely operable with one hand. |
-| handset-2 | 350px | 399px | Medium devices that can be held in one hand, and are mostly (but not completly) operable with one hand. |
-| handset-3 | 400px | 499px | Large devices that can be held in one hand, but are not entirely operable with one hand. |
-| portable-1 | 500px | 649px | Small tablets. Narrow desktop windows. |
-| portable-2 | 650px | 849px | Regular tablets (ie. iPad 9.7") in portrait, Small desktop windows. |
-| portable-3 | 850px | 1049px | Large tablets in portrait. Small and regular tablets in landscape. 1024x768. |
-| wide-1 | 1050px | 1499px | Large tablets in landscape and laptops. 720p, 1366x768, 1280x800.  |
-| wide-2 | 1500px | none | Desktop and other large displays. 1680x1050, 1080p/4K. |
+| sw.handset-1 | none | 349px | Small devices that can be held in one hand, and are entirely operable with one hand. |
+| sw.handset-2 | 350px | 399px | Medium devices that can be held in one hand, and are mostly (but not completly) operable with one hand. |
+| sw.handset-3 | 400px | 499px | Large devices that can be held in one hand, but are not entirely operable with one hand. |
+| sw.portable-1 | 500px | 649px | Small tablets. Narrow desktop windows. |
+| sw.portable-2 | 650px | 849px | Regular tablets (ie. iPad 9.7") in portrait, Small desktop windows. |
+| sw.portable-3 | 850px | 1049px | Large tablets in portrait. Small and regular tablets in landscape. 1024x768. |
+| sw.wide-1 | 1050px | 1499px | Large tablets in landscape and laptops. 720p, 1366x768, 1280x800.  |
+| sw.wide-2 | 1500px | none | Desktop and other large displays. 1680x1050, 1080p/4K. |
 
 
 
 ### Display height groups
 
-| display bucket | min width | max width | analogues |
+| display bucket | min height | max height | analogues |
 |---|--|--|--|
-| limited | none | 499px | Handheld devices (ie. phones) in landscape. The amount of vertical space is very limited. |
-| medium | 500px | 849px | Small and regular tablets in landscape. The amount of vertical space is restricted. |
-| tall | 850px | none | Large landscape tablet, laptop, desktop, or TV contexts. The amount of vertical space is ample. |
+| sh.limited | none | 499px | Handheld devices (ie. phones) in landscape. The amount of vertical space is very limited. |
+| sh.medium | 500px | 849px | Small and regular tablets in landscape. The amount of vertical space is restricted. |
+| sh.tall | 850px | none | Large landscape tablet, laptop or desktop contexts. The amount of vertical space is ample. |
 
 
 

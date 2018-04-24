@@ -74,21 +74,41 @@ Because what `gutter()` does applies equally in both horizontal directions, it d
 
 (short for 'Sequential Gutter')
 
-This is Thorium's mixin for the well-known first-child/last-child trick. This is generally only designed for one-dimensional spacing, but if you can think of a scenario for two-dimensional spacing, you can use it for that too.
+This is a mixin designed for spacing out items based on their order to each other.
 
-This is much less flexible, but also doesn't require extra nested divs.
+````
 
-You use this on the container and it is applied to all children.
+// Stylus
+
+.weed
+	gutter-seq(right, 20px, last)
+	
+	
+// Generated CSS
+
+
+.weed > *
+	margin-right: 20px;
+	
+.weed:last-child
+	margin-right: 0;
+
+
+````
+
+
+This is generally only designed for one-dimensional spacing, but if you can think of a scenario for two-dimensional spacing, you can use it for that too.
+
+This is much less flexible, but also doesn't require extra nested divs like `gutter()` does.
 
 
 ### Implementation
 There are two variants of gutter-seq:
 
-- `gutter-seq()` is applied to a container to affect all it's children.
-- `gutter-seq-this()` is applied to the items themselves.
+- `gutter-seq()` is applied to a container to affect the layout of all it's children.
+- `gutter-seq-this()` is applied to specific selectors to affect the layout of only those things.
 
 ### Values
-
 `gutter-seq(direction, length, seq)`
 
 `gutter-seq-this(direction, length, seq)`
@@ -96,19 +116,25 @@ There are two variants of gutter-seq:
 
 <br/>
 
-`direction` can be:
+##### direction
 
 - `top`
 - `bottom`
 - `left`
 - `right`
-- `start` (start of reading flow)
-- `end` (end of reading flow)
+- `start` (start of reading flow, instead of left/right)
+- `end` (end of reading flow, instead of left/right)
 
-`length` is how much in that direction you want the spacing to be.
+Using `start` and `end` requires you to set a `dir` on the `<html>` tag. See the [bidirectionality doc](bidir.md) for more information (as the `start` and `end` here use the `margin-start` and `margin-end` mixins).
 
 
-`seq` is where you decide what which object at what end has their margins cancelled out: 
+##### length
+
+How much in that direction you want the spacing to be. (ie. `20px`, `2em`, etc.)
+
+##### seq
+
+Which object at what end has their margins cancelled out: 
 
 
 - `first`
@@ -119,5 +145,4 @@ There are two variants of gutter-seq:
 
 <br/>
 
-Using `start` or `end` is highly recommended and necessary if you want to make sure your spacing works in a bidirectional design context.
 
