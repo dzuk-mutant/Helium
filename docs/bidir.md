@@ -56,7 +56,7 @@ With Thorium, you can use `text-align: start/end` and Thorium will automatically
 // What the mixin does
 
 .blah
-	html[dir='rtl'] &
+	html[dir='ltr'] &
 		text-align: right
 
 	html[dir='rtl'] &
@@ -92,7 +92,7 @@ Create horizontal padding and margins that are relative to the reading flow.
 // What the mixin does
 
 .sigh
-	html[dir='rtl'] &
+	html[dir='ltr'] &
 		margin-left: 420.69px
 
 	html[dir='rtl'] &
@@ -128,7 +128,7 @@ Create fixed/absolute positioning relative to the reading flow.
 // What the mixin does
 
 . jort
-	html[dir='rtl'] &
+	html[dir='ltr'] &
 		right: 666px
 		
 	html[dir='rtl'] &
