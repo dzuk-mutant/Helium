@@ -4,16 +4,16 @@ Helium is mostly a series of pre-built, configurable objects for simplifying lay
 
 ### Variables and Defaults
 
-#### [Display](dimen.md)
+#### [Display](display.md)
 Helium's display buckets for responsive designs.
 
-#### [Icons](dimen.md)
+#### [Icons](icons.md)
 Helium's default styles for icons and some icon sizing techniques.
 
 
 ### Layout Objects
 
-#### [Flex Shortcuts](bidir.md)
+#### [Flex Shortcuts](flex_shortcuts)
 Simple layout components based on Flexbox.
 
 #### [Gutter](gutter.md)
