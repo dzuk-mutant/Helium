@@ -221,10 +221,12 @@
   display: flex;
 }
 .frame > .container {
-  flex: 1, 1, auto;
+  flex: 1 1 auto;
   align-self: stretch;
 }
-[class*="ic-"] {
+[class*="ic-"],
+[class*="ico-"],
+[class*="icon-"] {
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -259,15 +261,17 @@ button {
   margin-right: 0;
   border: none;
 }
+button:focus {
+  outline: 0;
+}
 button > .frame > .container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 button > .frame > .container > * {
-  flex: 0, 0, auto;
+  flex: 0 0 auto;
 }
-@import 'external/normalize.css';
 .width-label {
   user-select: none;
   -webkit-user-select: none;
@@ -276,10 +280,10 @@ button > .frame > .container > * {
   position: sticky;
   position: -webkit-sticky;
 }
-html[dir='ltr'] .width-label {
+body[dir='ltr'] .width-label {
   text-align: left;
 }
-html[dir='rtl'] .width-label {
+body[dir='rtl'] .width-label {
   text-align: right;
 }
 @media screen and (max-width: 499px) {
@@ -305,10 +309,10 @@ html[dir='rtl'] .width-label {
   position: sticky;
   position: -webkit-sticky;
 }
-html[dir='ltr'] .height-label {
+body[dir='ltr'] .height-label {
   text-align: left;
 }
-html[dir='rtl'] .height-label {
+body[dir='rtl'] .height-label {
   text-align: right;
 }
 @media screen and (max-height: 499px) {
@@ -340,9 +344,9 @@ html[dir='rtl'] .height-label {
   margin-bottom: 12px;
   background-color: #000;
 }
-html[dir='ltr'] .hi > * {
+body[dir='ltr'] .hi > * {
   margin-right: 12px;
 }
-html[dir='rtl'] .hi > * {
+body[dir='rtl'] .hi > * {
   margin-left: 12px;
 }

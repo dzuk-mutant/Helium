@@ -221,10 +221,12 @@
   display: flex;
 }
 .frame > .container {
-  flex: 1, 1, auto;
+  flex: 1 1 auto;
   align-self: stretch;
 }
-[class*="ic-"] {
+[class*="ic-"],
+[class*="ico-"],
+[class*="icon-"] {
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -259,15 +261,17 @@ button {
   margin-right: 0;
   border: none;
 }
+button:focus {
+  outline: 0;
+}
 button > .frame > .container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 button > .frame > .container > * {
-  flex: 0, 0, auto;
+  flex: 0 0 auto;
 }
-@import 'external/normalize.css';
 .hithere {
   margin: 10px;
   background-color: #ddd;

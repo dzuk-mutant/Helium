@@ -1,18 +1,22 @@
 # Thorium
 
-Thorium is an experimental, small [Stylus]() framework designed for immersive, responsive interfaces that maximise the use of screen space, while cutting the bullshit as much as possible and keeping everything predictable *and* totally flexible.
+Thorium is an experimental, small [Stylus]() framework designed for immersive, responsive interfaces that maximise the use of screen space, cutting frustrating CSS tendencies as much as by enforcing that everything remains predictable *and* totally flexible.
 
 Thorium is mostly just an array of prebuilt pieces and a variety of specific overrides to flatten out certain CSS behaviours. It also encourages a hearty use of Flexbox.
 
-This doesn't intentionally support browsers from more than 5 years ago (as a general rule, some are much sooner). I try to aim for stuff that's at least 90% compatible in the present according to caniuse.com.
+To keep compiled CSS sizes down and because flexbox is a given, Thorium intentionally doesn't support browsers from more than 5 years ago (as a general rule, some are much sooner). If you want something more backwards compatible, looking for another CSS framework would probably be better for you.
 
 This is also a personal project and isn't necessarily structured in the best way or totally stable. So be careful about that.
 
-<br/>
+----
 
-This has been used to make things like [Pineapple](https://github.com/dzuk-mutant/pineapple), [Mutant Standard's website](https://mutant.tech) and [instances.noct.zone](http://instances.noct.zone).
+## Thorium in action
 
-Check out the [documentation](docs/) if you're curious as to what's inside.
+- [Pineapple](https://github.com/dzuk-mutant/pineapple)
+- [Mutant Standard's website](https://mutant.tech)
+- [My personal website](https://noct.zone)
+- [instances.noct.zone](http://instances.noct.zone).
+
 
 ----
 
@@ -27,14 +31,25 @@ Check out the [documentation](docs/) if you're curious as to what's inside.
 
 ## How to use
 
-import the `_thorium.styl` file in [`_thorium/`](_thorium):
+Copy and paste the thorium folder where you need it and then just import it in your styles (as one of the first imports). Then you can reference all of it's features in your style sheets!
 
-eg. `@import '_thorium/_thorium.styl'`
+```
+@import '/thorium'
+
+```
+----
+
+## Docs
+
+I keep Thorium pretty well documented!
+
+[You can read all of the documentation here.](docs/docs.md)
+
 
 ----
 
 ## Licenses and Credits
 
-Check out [the licenses folder](docs/licenses) folder for all licenses.
+[Thorium is licensed under the MIT license](license.txt).
 
-- Thanks to Amphetamine on Mastodon for the name idea. (The original name was far less savoury...)
+Thanks to Amphetamine on Mastodon for the name idea. (The original name was far less savoury...)

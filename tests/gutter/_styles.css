@@ -221,10 +221,12 @@
   display: flex;
 }
 .frame > .container {
-  flex: 1, 1, auto;
+  flex: 1 1 auto;
   align-self: stretch;
 }
-[class*="ic-"] {
+[class*="ic-"],
+[class*="ico-"],
+[class*="icon-"] {
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -259,15 +261,17 @@ button {
   margin-right: 0;
   border: none;
 }
+button:focus {
+  outline: 0;
+}
 button > .frame > .container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 button > .frame > .container > * {
-  flex: 0, 0, auto;
+  flex: 0 0 auto;
 }
-@import 'external/normalize.css';
 body {
   margin: 20px;
 }
@@ -304,17 +308,17 @@ body {
 .gutter-pad > * {
   border: 1px solid #666;
 }
-html[dir='ltr'] .gutter-seq > * {
+body[dir='ltr'] .gutter-seq > * {
   margin-right: 40px;
 }
-html[dir='rtl'] .gutter-seq > * {
+body[dir='rtl'] .gutter-seq > * {
   margin-left: 40px;
 }
-html[dir='ltr'] .gutter-seq > *:first-child {
-  margin-right: none;
+body[dir='ltr'] .gutter-seq > *:last-child {
+  margin-right: 0;
 }
-html[dir='rtl'] .gutter-seq > *:first-child {
-  margin-left: none;
+body[dir='rtl'] .gutter-seq > *:last-child {
+  margin-left: 0;
 }
 .gutter-seq > * {
   border: 1px solid #666;
@@ -322,17 +326,17 @@ html[dir='rtl'] .gutter-seq > *:first-child {
 .gutter-seq-this > * {
   border: 1px solid #666;
 }
-html[dir='ltr'] .gutter-seq-this > * {
+body[dir='ltr'] .gutter-seq-this > * {
   margin-right: 40px;
 }
-html[dir='rtl'] .gutter-seq-this > * {
+body[dir='rtl'] .gutter-seq-this > * {
   margin-left: 40px;
 }
-html[dir='ltr'] .gutter-seq-this > *:first-child {
-  margin-right: none;
+body[dir='ltr'] .gutter-seq-this > *:last-child {
+  margin-right: 0;
 }
-html[dir='rtl'] .gutter-seq-this > *:first-child {
-  margin-left: none;
+body[dir='rtl'] .gutter-seq-this > *:last-child {
+  margin-left: 0;
 }
 .flexgrid.row > *,
 .flexblocks.row > * {

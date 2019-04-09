@@ -1,0 +1,72 @@
+
+// these mixins allow you to simply designate horizontal margins and
+// paddings that will flip depending on reading direction.
+
+// start = The direction the reading direction starts.
+// end = The direction the reading direction ends.
+
+
+// these create the definitions of finding the closest parent with the right direction.
+// - forward, ignoring reverse parents of the forward
+// - a forward that doesn't have an reverse child.
+
+dir-ltr()
+	body[dir='ltr'] &
+		{block}
+
+
+dir-rtl()
+	body[dir='rtl'] &
+		{block}
+
+
+// --------------------------------------------------
+
+margin-start(l)
+	+dir-ltr() {margin-left: l}
+	+dir-rtl() {margin-right: l}
+
+margin-end(l)
+	+dir-ltr() {margin-right: l}
+	+dir-rtl() {margin-left: l}
+
+padding-start(l)
+	+dir-ltr() {padding-left: l}
+	+dir-rtl() {padding-right: l}
+
+padding-end(l)
+	+dir-ltr() {padding-right: l}
+	+dir-rtl() {padding-left: l}
+
+
+
+// this provides the real thing and also provides
+// fallback substitutions.
+
+text-align(pos)
+	if pos == start
+		+dir-ltr() { text-align: left }
+		+dir-rtl() { text-align: right }
+		//text-align: start
+
+	else if pos == end
+		+dir-ltr() { text-align: right }
+		+dir-rtl() { text-align: left }
+		//text-align: end
+
+	else
+		text-align: pos
+		// THIS IS IMPORTANT. ELSE THIS FUNCTION
+		// WILL JUST EAT ANY OTHER VALUE AND NOT SHOW ANYTHING
+
+
+
+
+// alternatives to left: x and right: x when positioning fixed objects.
+start(l)
+	+dir-ltr() { left: l }
+	+dir-rtl() { right: l }
+
+end(l)
+	+dir-ltr() { right: l }
+	+dir-rtl() { left: l }

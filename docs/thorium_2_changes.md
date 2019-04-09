@@ -54,10 +54,10 @@ Bidirectional mixins are more powerful now you can use them like normal CSS attr
 
 // css output
 
-html[dir='ltr'] .thing {
+body[dir='ltr'] .thing {
   text-align: right;
 }
-html[dir='rtl'] .thing {
+body[dir='rtl'] .thing {
   text-align: left;
 }
 

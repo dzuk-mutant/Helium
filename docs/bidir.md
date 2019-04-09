@@ -12,13 +12,14 @@ Bidirectionality refers to designing interfaces and layouts that work properly i
 
 One of the things that makes Flexbox so great is that everything about it works bidirectionally by default, so if you use a lot of flexbox, you're most of the way there! Unfortunately, some aspects of CSS aren't there yet.
 
-This is where these bidirectional mixins come in. These are simple shortcuts that just switch horizontal direction depending on the set `dir` (either `ltr` or `rtl`) of the `<html>` tag.
+This is where these bidirectional mixins come in. These are simple shortcuts that just switch horizontal direction depending on the `dir` attribute (either `ltr` or `rtl`) of the parent.
 
-Your `<html>` needs a set `dir`, else these styles won't work.
+There needs to be a `dir` attribute on the body element, or these will not work.
 
 ```
-<html dir='ltr'>
+<body dir='ltr'>
 	// STUFF
+</body>
 ```
 
 ---
@@ -56,21 +57,21 @@ With Thorium, you can use `text-align: start/end` and Thorium will automatically
 // What the mixin does
 
 .blah
-	html[dir='ltr'] &
+	body[dir='ltr'] &
 		text-align: right
 
-	html[dir='rtl'] &
+	body[dir='rtl'] &
 		text-align: left
 		
 
 
 // Generated CSS
 
-html[dir='ltr'] .blah { 
+body[dir='ltr'] .blah { 
 	text-align: right
 }
 
-html[dir='rtl'] .blah {
+body[dir='rtl'] .blah {
 	text-align: left
 }
 
@@ -92,20 +93,20 @@ Create horizontal padding and margins that are relative to the reading flow.
 // What the mixin does
 
 .sigh
-	html[dir='ltr'] &
+	body[dir='ltr'] &
 		margin-left: 420.69px
 
-	html[dir='rtl'] &
+	body[dir='rtl'] &
 		margin-right: 420.69px
 		
 		
 // Generated CSS
 
-html[dir='ltr'] .sigh {
+body[dir='ltr'] .sigh {
 	margin-left: 420.69px
 }
 
-html[dir='rtl'] .sigh {
+body[dir='rtl'] .sigh {
 	margin-right: 420.69px
 }
 
@@ -128,20 +129,20 @@ Create fixed/absolute positioning relative to the reading flow.
 // What the mixin does
 
 . jort
-	html[dir='ltr'] &
+	body[dir='ltr'] &
 		right: 666px
 		
-	html[dir='rtl'] &
+	body[dir='rtl'] &
 		left: 666px
 		
 	
 	
 // Generated CSS
 
-html[dir='ltr'] .jort { 
+body[dir='ltr'] .jort { 
 	right: 666px 
 }
-html[dir='rtl'] .jort { 
+body[dir='rtl'] .jort { 
 	left: 666px 
 }
 
@@ -153,4 +154,4 @@ html[dir='rtl'] .jort {
 
 ### gutter-seq
 
-`gutter-seq` can also be used bidirectionally. Check [the documentation on gutters](gutter.md#gutter-seq) for more information.
+`gutter-seq` can also be used bidirectionally. Check body[the documentation on gutters](gutter.md#gutter-seq) for more information.

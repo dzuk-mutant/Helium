@@ -221,10 +221,12 @@
   display: flex;
 }
 .frame > .container {
-  flex: 1, 1, auto;
+  flex: 1 1 auto;
   align-self: stretch;
 }
-[class*="ic-"] {
+[class*="ic-"],
+[class*="ico-"],
+[class*="icon-"] {
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -259,15 +261,17 @@ button {
   margin-right: 0;
   border: none;
 }
+button:focus {
+  outline: 0;
+}
 button > .frame > .container {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 button > .frame > .container > * {
-  flex: 0, 0, auto;
+  flex: 0 0 auto;
 }
-@import 'external/normalize.css';
 body {
   background-color: #000;
   color: #fff;
@@ -278,10 +282,10 @@ body {
   background-color: rgba(200,20,20,0.1);
   align-items: flex-end;
 }
-html[dir='ltr'] .boundary {
+body[dir='ltr'] .boundary {
   left: 0;
 }
-html[dir='rtl'] .boundary {
+body[dir='rtl'] .boundary {
   right: 0;
 }
 .boundary.h {

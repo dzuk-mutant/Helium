@@ -275,8 +275,38 @@ button > .frame > .container > * {
 body {
   margin: 20px;
 }
-h1 {
-  white-space: nowrap;
-  overflow-x: hidden;
-  text-overflow: ellipsis;
+body[dir='ltr'] p {
+  text-align: right;
+}
+body[dir='rtl'] p {
+  text-align: left;
+}
+.inner {
+  background-color: #ff0;
+}
+body[dir='ltr'] .inner p {
+  text-align: left;
+}
+body[dir='rtl'] .inner p {
+  text-align: right;
+}
+.test-objects {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #f00;
+}
+.test-objects > * {
+  flex: 0 0 auto;
+}
+body[dir='ltr'] .test-objects > * {
+  margin-right: 10px;
+}
+body[dir='rtl'] .test-objects > * {
+  margin-left: 10px;
+}
+.test-objects > * {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
 }
