@@ -34,7 +34,7 @@ This is also a personal project and isn't necessarily structured in the best way
 Copy and paste the helium folder where you need it and then just import it in your styles (as one of the first imports). Then you can reference all of it's features in your style sheets!
 
 ```
-@import '/helium'
+@import 'helium'
 
 ```
 ----
