@@ -1,8 +1,8 @@
 # Flex Shortcuts
 
-Thorium features powerful shortcuts for implementing common usage patterns for flexbox.
+Helium features powerful shortcuts for implementing common usage patterns for flexbox.
 
-Every shortcut is built on top of Thorium's flex mixins.
+Every shortcut is built on top of Helium's flex mixins.
 
 All usage patterns can be implemented in HTML (object-oriented style), or added to the code as mixins to be dynamically changed with things like @media queries.
 

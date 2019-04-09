@@ -45,7 +45,7 @@ They refer to the position of something based on the *reading flow* of the scrip
 ### text-align: start/end
 There are experimental values for `text-align` in CSS whereby you can align the text horizontally in a way that is relative to the reading flow, but unfortunately these aren't supported by all browsers.
 
-With Thorium, you can use `text-align: start/end` and Thorium will automatically place a polyfill.
+With Helium, you can use `text-align: start/end` and Helium will automatically place a polyfill.
 
 ```
 // Stylus

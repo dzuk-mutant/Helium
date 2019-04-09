@@ -1,5 +1,5 @@
 # Prefixes
-Thorium supports a few properties and selectors in helping you deal with those pesky vendor prefixes.
+Helium supports a few properties and selectors in helping you deal with those pesky vendor prefixes.
 
 ---
 

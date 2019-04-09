@@ -3,9 +3,9 @@
 ![](images/display_portrait.png)
 ![](images/display_landscape.png)
 
-This is Thorium's display boundary stuff.
+This is Helium's display boundary stuff.
 
-Because Thorium is designed with full-screen software design in mind, screen size boundaries are relatively granular (but can also be more generic if you wish) and are oriented around ergonomic considerations.
+Because Helium is designed with full-screen software design in mind, screen size boundaries are relatively granular (but can also be more generic if you wish) and are oriented around ergonomic considerations.
 
 The boundaries were developed from researching a lot of different devices' virtual display sizes as would be seen by a web browser.
 

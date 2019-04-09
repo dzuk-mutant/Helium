@@ -1,14 +1,14 @@
-# Thorium Docs
+# Helium Docs
 
-Thorium is mostly a series of pre-built, configurable objects for simplifying layouts. There are also a few default behaviours built-in.
+Helium is mostly a series of pre-built, configurable objects for simplifying layouts. There are also a few default behaviours built-in.
 
 ### Variables and Defaults
 
 #### [Display](dimen.md)
-Thorium's display buckets for responsive designs.
+Helium's display buckets for responsive designs.
 
 #### [Icons](dimen.md)
-Thorium's default styles for icons and some icon sizing techniques.
+Helium's default styles for icons and some icon sizing techniques.
 
 
 ### Layout Objects
@@ -34,5 +34,5 @@ A few polyfills for browser prefixing.
 
 ### Other
 
-#### [Thorium 2 Changes](thorium_2_changes.md)
-Changes between Thorium 1 and 2.
+#### [Helium 2 Changes](helium_2_changes.md)
+Changes between Helium 2 and previous versions.

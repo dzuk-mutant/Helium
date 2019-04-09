@@ -1,8 +1,8 @@
-# Thorium 2 changes
+# Helium 2 changes
 
-This is a list of changes between this version of Thorium, and the original version.
+This is a list of changes between this version of Helium, and the original version.
 
-Thorium 2 (this version) now uses [Stylus](http://stylus-lang.com) instead of Less. Expect to rewrite your styles because this syntax is different. But it shouldn't be too time-consuming.
+Helium 2 (this version) now uses [Stylus](http://stylus-lang.com) instead of Less. Expect to rewrite your styles because this syntax is different. But it shouldn't be too time-consuming.
 
 
 ## Changes
@@ -13,7 +13,7 @@ A lot of files have been rearranged.
 
 ### New preprocessor
 
-Thorium 2 (this version) now uses [Stylus](http://stylus-lang.com) instead of Less.
+Helium 2 now uses [Stylus](http://stylus-lang.com) instead of Less.
 
 Some key differences to Less (ie. mostly unexpected stuff I learned when I ran into):
 

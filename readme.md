@@ -1,16 +1,16 @@
-# Thorium
+# Helium
 
-Thorium is an experimental, small [Stylus]() framework designed for immersive, responsive interfaces that maximise the use of screen space, cutting frustrating CSS tendencies as much as by enforcing that everything remains predictable *and* totally flexible.
+Helium is an experimental, small [Stylus]() framework designed for immersive, responsive interfaces that maximise the use of screen space, cutting frustrating CSS tendencies as much as by enforcing that everything remains predictable *and* totally flexible.
 
-Thorium is mostly just an array of prebuilt pieces and a variety of specific overrides to flatten out certain CSS behaviours. It also encourages a hearty use of Flexbox.
+Helium is mostly just an array of prebuilt pieces and a variety of specific overrides to flatten out certain CSS behaviours. It also encourages a hearty use of Flexbox.
 
-To keep compiled CSS sizes down and because flexbox is a given, Thorium intentionally doesn't support browsers from more than 5 years ago (as a general rule, some are much sooner). If you want something more backwards compatible, looking for another CSS framework would probably be better for you.
+To keep compiled CSS sizes down and because flexbox is a given, Helium intentionally doesn't support browsers from more than 5 years ago (as a general rule, some are much sooner). If you want something more backwards compatible, looking for another CSS framework would probably be better for you.
 
 This is also a personal project and isn't necessarily structured in the best way or totally stable. So be careful about that.
 
 ----
 
-## Thorium in action
+## Helium in action
 
 - [Pineapple](https://github.com/dzuk-mutant/pineapple)
 - [Mutant Standard's website](https://mutant.tech)
@@ -31,17 +31,17 @@ This is also a personal project and isn't necessarily structured in the best way
 
 ## How to use
 
-Copy and paste the thorium folder where you need it and then just import it in your styles (as one of the first imports). Then you can reference all of it's features in your style sheets!
+Copy and paste the helium folder where you need it and then just import it in your styles (as one of the first imports). Then you can reference all of it's features in your style sheets!
 
 ```
-@import '/thorium'
+@import '/helium'
 
 ```
 ----
 
 ## Docs
 
-I keep Thorium pretty well documented!
+I keep Helium pretty well documented!
 
 [You can read all of the documentation here.](docs/docs.md)
 
@@ -50,6 +50,4 @@ I keep Thorium pretty well documented!
 
 ## Licenses and Credits
 
-[Thorium is licensed under the MIT license](license.txt).
-
-Thanks to Amphetamine on Mastodon for the name idea. (The original name was far less savoury...)
+[Helium is licensed under the MIT license](license.txt).
