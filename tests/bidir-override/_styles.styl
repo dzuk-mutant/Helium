@@ -1,0 +1,31 @@
+// out: _styles.css
+@import '../../helium'
+
+dir-ltr()
+    #override[dir='ltr'] &
+        {block}
+
+dir-rtl()
+    #override[dir='rtl'] &
+        {block}
+
+body
+    margin: 20px
+
+p
+    text-align: end
+
+.inner
+    background-color: yellow
+
+    p
+        text-align: start
+
+.test-objects
+    flexblocks(row)
+    gutter-seq(end, 10px, none)
+    background-color: red
+
+    > *
+        size(100px)
+        background-color: black
