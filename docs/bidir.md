@@ -115,7 +115,11 @@ body[dir='rtl'] .sigh {
 
 ### start/end
 
-Create fixed/absolute positioning relative to the reading flow.
+The bidirectional equivalent of `left`/`right`.
+
+Lets you create fixed/absolute positioning relative to the reading flow.
+
+
 
 ```
 

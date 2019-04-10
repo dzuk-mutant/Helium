@@ -17,7 +17,10 @@ Helium's default styles for icons and some icon sizing techniques.
 Simple layout components based on Flexbox.
 
 #### [Gutter](gutter.md)
-Shortcuts for spacing objects.
+Spacing objects within a container.
+
+#### [Containers](containers.md)
+Methods of containing things.
 
 
 ### Simple Objects
