@@ -13,7 +13,7 @@ Helium's default styles for icons and some icon sizing techniques.
 
 ### Layout Objects
 
-#### [Flex Shortcuts](flex_shortcuts)
+#### [Flex Shortcuts](flex_shortcuts.md)
 Simple layout components based on Flexbox.
 
 #### [Gutter](gutter.md)
