@@ -125,7 +125,7 @@ There are two variants of gutter-seq:
 - `start` (start of reading flow, instead of left/right)
 - `end` (end of reading flow, instead of left/right)
 
-Using `start` and `end` requires you to set a `dir` on the `<html>` tag. See the [bidirectionality doc](bidir.md) for more information (as the `start` and `end` here use the `margin-start` and `margin-end` mixins).
+Using `start` and `end` has certain extra requirements. See the [bidirectionality doc](bidir.md) for more information (as the `start` and `end` here use the `margin-start` and `margin-end` mixins).
 
 
 ##### length

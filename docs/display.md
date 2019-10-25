@@ -31,8 +31,8 @@ ie. `@media sh.limited`
 | display bucket | min width | max width | analogues |
 |---|--|--|--|
 | sw.handset-1 | none | 349px | Small devices that can be held in one hand, and are entirely operable with one hand. |
-| sw.handset-2 | 350px | 399px | Medium devices that can be held in one hand, and are mostly (but not completly) operable with one hand. |
-| sw.handset-3 | 400px | 499px | Large devices that can be held in one hand, but are not entirely operable with one hand. |
+| sw.handset-2 | 350px | 389px | Medium devices that can be held in one hand, and are mostly (but not completly) operable with one hand. |
+| sw.handset-3 | 390px | 499px | Large devices that can be held in one hand, but are not entirely operable with one hand. |
 | sw.portable-1 | 500px | 649px | Small tablets. Narrow desktop windows. |
 | sw.portable-2 | 650px | 849px | Regular tablets (ie. iPad 9.7") in portrait, Small desktop windows. |
 | sw.portable-3 | 850px | 1049px | Large tablets in portrait. Small and regular tablets in landscape. 1024x768. |
@@ -55,22 +55,63 @@ ie. `@media sh.limited`
 
 ### Device examples:
 
-##### Small handheld devices (<4.5")
-Apple iPhone SE.
+##### handset-1
+Typically devices below 4.7".
 
-##### Medium handheld devices (4.5 - 5")
-Apple iPhone 6-8, Apple iPhone X, Google Pixel, Samsung Galaxy phones, Sony Xperia XZ2 Compact.
+| Device(s) | Viewport resolution (portrait) |
+| -- | -- |
+| Apple iPhone 1-4 | 320 x 480 |
+| Apple iPhone 5, 5c, 5s, SE | 320 x 568 |
 
-##### Large handheld devices (5 - 6.5")  
-Apple iPhone 6-8 Plus, Google Pixel XL, Samsung Galaxy S6+ onwards, Samsung Galaxy Note, Sony Xperia XZ2.
+##### handset-2
+Typically devices between 4.7 - ~6"
 
-##### Small tablets (7 - 8")
-Nexus 7, NVIDIA SHIELD, most tablets between 7 and 8".
-  
-##### Regular tablets (8 - 10")
-iPad 9.7", iPad mini, Samsung Galaxy Tab, Nexus 10, Nexus 9, Pixel C, most tablets between 8 and 10".
+| Device(s) | Viewport resolution (portrait) |
+| -- | -- |
+| Apple iPhone 6-8 | 375 x 687 |
+| Apple iPhone X, XS, 11 Pro | 375 x 812 |
+| Sony Xperia XZ2 Compact | 360 x 720 |
 
-##### Large tablets (>10")
-iPad Pro 12.9", Surface Pro, most tablets larger than 10".
+##### handset-3
+Typically devices between ~6 - 7".
+
+| Device(s) | Viewport resolution (portrait) |
+| -- | -- |
+| Google Pixel XL | 412 x 732 |
+| Apple iPhone 6-8 Plus | 414 x 736 |
+| Google Pixel 3 | 411 x 823 (x2.625) |
+| Google Pixel 3 XL | 411 x 846 (x3) |
+| Apple iPhone XR, XS Max, 11, 11 Pro Max | 414 x 896 |
+| Samsung Galaxy S9+, Google Pixel 3 XL | 411 x 846 |
+| Sony Xperia 1 | 411 x 960 |
+
+##### portable-1
+Devices between 7 - 8".
+
+| Device(s) | Viewport resolution (portrait) |
+| -- | -- |
+| Google Nexus 7 (2013) | 600 x 960 |
+
+
+##### portable-2
+Devices between 8 - 10".
+
+| Device(s) | Viewport resolution (portrait) |
+| -- | -- |
+| Apple iPad 9.7", mini | 768 x 1024 |
+| Apple iPad 10.2" | 810 x 1080 |
+| Apple iPad Pro (2015-2017) 10.5" | 834 x 1112 |
+| Apple iPad Pro (2018) 11" | 834 x 1194 |
+| Google Nexus 10 | 800 x 1280 |
+| Google Pixel C | 900 x 1280 |
+
+
+##### portable-3
+Portable devices larger than 10".
+
+| Device(s) | Viewport resolution (portrait) |
+| -- | -- |
+| Apple iPad Pro (2015-2017, 2018) 12.9" | 1024 x 1366 |
+| Microsoft Surface Pro 2017 | 912 x 1368 |
 
 ---

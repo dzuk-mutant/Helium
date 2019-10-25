@@ -1,10 +1,10 @@
 # Helium
 
-Helium is an experimental, small [Stylus]() framework designed for immersive, responsive interfaces that maximise the use of screen space, cutting frustrating CSS tendencies as much as by enforcing that everything remains predictable *and* totally flexible.
+Helium is an experimental, small [Stylus]() framework designed for immersive, responsive web design.
 
-Helium is mostly just an array of prebuilt pieces and a variety of specific overrides to flatten out certain CSS behaviours. It also encourages a hearty use of Flexbox.
+Unlike other CSS frameworks, Helium is mostly just an array of prebuilt pieces to create standardised behaviours to build UI components off of. It doesn't presume or have at hand specific metaphors or UI elements.
 
-To keep compiled CSS sizes down and because flexbox is a given, Helium intentionally doesn't support browsers from more than 5 years ago (as a general rule, some are much sooner). If you want something more backwards compatible, looking for another CSS framework would probably be better for you.
+To keep compiled CSS sizes down and because flexbox is a given, Helium intentionally doesn't support browsers from more than 5 years ago (as a general rule, some are much sooner) and does not support any form of Internet Explorer. If you want something more backwards compatible, looking for another CSS framework would probably be better for you.
 
 This is also a personal project and isn't necessarily structured in the best way or totally stable. So be careful about that.
 
