@@ -4,6 +4,8 @@ Gutters are mixins that give you convenient ways to space out items.
 
 ## gutter()
 
+*Note: Fortunately, this will eventually be rendered obsolete by the upcoming CSS [`gap` property](https://developer.mozilla.org/en-US/docs/Web/CSS/gap#Browser_compatibility).*
+
 The `gutter()` mixin adds 2D spacing to an array of objects, designed especially for flexbox items. This class ensures that all items within a container have even spacing in between them, but no spacing on the edges of the container.
 
 
