@@ -6,8 +6,6 @@ Unlike other CSS frameworks, Helium is mostly just an array of prebuilt pieces t
 
 To keep compiled CSS sizes down and because flexbox is a given, Helium intentionally doesn't support browsers from more than 5 years ago (as a general rule, some are much sooner) and does not support any form of Internet Explorer. If you want something more backwards compatible, looking for another CSS framework would probably be better for you.
 
-This is also a personal project and isn't necessarily structured in the best way or totally stable. So be careful about that.
-
 ----
 
 ## Helium in action
