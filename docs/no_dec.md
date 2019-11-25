@@ -1,6 +1,7 @@
 # No Decoration
 
 These are a series of classes to extend when you want to clear default styles for various semantic HTML tags that have very specific/strong default style behaviour.
+
 ---
 
 ## `a.no-dec`
