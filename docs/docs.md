@@ -26,14 +26,17 @@ Methods of containing things.
 ### Simple Objects
 
 #### [Bidirectionality](bidir.md)
-Shortcuts enhancing the bidirectionality of your designs.
+Shortcuts for enhancing the bidirectionality of your designs.
 
 #### [Dimensions](dimen.md)
 Shortcuts for sizing objects.
 
-
 #### [Prefixes](prefixes.md)
 A few polyfills for browser prefixing.
+
+#### [No Decoration](no_dec.md)
+Selectively clearing default styles for various semantic HTML tags.
+
 
 ### Other
 

@@ -115,7 +115,7 @@ handset-1-max = handset-2-min - 1px
 
 // standard-size tablets in portrait (~8-10")
 
-tall =					850px
+tall = 850px
 
 
 
@@ -124,8 +124,8 @@ tall =					850px
 
 // 720p, tablets and laptop displays in landscape.
 
-medium = 					500px
-medium-max =			tall - 1px
+medium = 500px
+medium-max = tall - 1px
 
 
 
@@ -134,8 +134,8 @@ medium-max =			tall - 1px
 
 // handsets in landscape.
 
-limited = 				0px
-limited-max =			medium - 1px
+limited = 0px
+limited-max = medium - 1px
 
 
 
@@ -146,16 +146,16 @@ limited-max =			medium - 1px
 // ----------------------
 
 
-handset-1 =			screen-max(width, handset-1-max)
-handset-2 =			screen-min-max(width, handset-2-min, handset-2-max)
-handset-3 =			screen-min-max(width, handset-3-min, handset-3-max)
+handset-1 =	screen-max(width, handset-1-max)
+handset-2 =	screen-min-max(width, handset-2-min, handset-2-max)
+handset-3 =	screen-min-max(width, handset-3-min, handset-3-max)
 
-portable-1 =		screen-min-max(width, portable-1-min, portable-1-max)
-portable-2 =		screen-min-max(width, portable-2-min, portable-2-max)
-portable-3 =   	screen-min-max(width, portable-3-min, portable-3-max)
+portable-1 = screen-min-max(width, portable-1-min, portable-1-max)
+portable-2 = screen-min-max(width, portable-2-min, portable-2-max)
+portable-3 = screen-min-max(width, portable-3-min, portable-3-max)
 
-wide-1 =      	screen-min-max(width, wide-1-min, wide-1-max)
-wide-2 =     		screen-min(width, wide-2-min)
+wide-1 = screen-min-max(width, wide-1-min, wide-1-max)
+wide-2 = screen-min(width, wide-2-min)
 
 
 
@@ -164,20 +164,20 @@ wide-2 =     		screen-min(width, wide-2-min)
 // display groups
 // ----------------------
 
-handset-min = 	handset-1-min
-handset-max = 	handset-3-max
-portable-min = 	portable-1-min
-portable-max = 	portable-3-max
-wide-min = 			wide-1-min
+handset-min = handset-1-min
+handset-max = handset-3-max
+portable-min = portable-1-min
+portable-max = portable-3-max
+wide-min = wide-1-min
 
-handset =		screen-max(width, handset-max)
-portable = 	screen-min-max(width, portable-min, portable-max)
-wide = 			screen-min(width, wide-min)
+handset = screen-max(width, handset-max)
+portable = screen-min-max(width, portable-min, portable-max)
+wide = screen-min(width, wide-min)
 
 
-limited =		screen-max(height, limited-max)
-medium = 		screen-min-max(height, medium, medium-max)
-tall = 			screen-min(height, tall)
+limited = screen-max(height, limited-max)
+medium = screen-min-max(height, medium, medium-max)
+tall = screen-min(height, tall)
 
 
 

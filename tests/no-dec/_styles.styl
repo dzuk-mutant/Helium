@@ -1,0 +1,20 @@
+// out: _styles.css
+@import '../../helium'
+
+body
+	padding: 20px
+
+
+a.override
+	@extends a.no-dec
+	color: green
+	border-bottom: 2px solid #ff0000
+
+ul.override
+	@extends ul.no-dec
+	flexlinear(row)
+	justify-content: space-between
+	gutter-seq(right, 20px, end)
+
+	> li
+		color: red
