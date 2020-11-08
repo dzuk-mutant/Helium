@@ -12,7 +12,7 @@ If you want something more backwards compatible, looking for another CSS framewo
 
 ## Helium in action
 
-- [Parastat](https://parast.at) (both the software and website)
+- [Parastat's website](https://parast.at)
 - [Mutant Standard's website](https://mutant.tech)
 - [My personal website](https://noct.zone)
 - [instances.noct.zone](http://instances.noct.zone).
